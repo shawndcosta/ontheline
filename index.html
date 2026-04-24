@@ -23,43 +23,42 @@ body{font-family:var(--fb);background:var(--bk2);color:var(--bk);overflow-x:hidd
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--wh);display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:60px;border-bottom:2px solid var(--y)}
-.nav-logo{font-family:var(--fd);font-size:2rem;letter-spacing:.08em;color:var(--bk);cursor:pointer;user-select:none}
+.nav-logo{font-family:var(--fd);font-size:1.4rem;font-weight:700;color:var(--bk);cursor:pointer;user-select:none;text-decoration:none}
 .nav-links{display:flex;gap:2rem;align-items:center}
 .nav-links a{color:var(--bk);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;transition:color .2s;cursor:pointer}
 .nav-links a:hover{color:var(--yd)}
 .nav-cta{background:var(--y)!important;color:var(--bk)!important;padding:.4rem 1.1rem;border-radius:2px;font-weight:600!important}
-.nav-cta:hover{background:var(--yd)!important}
+.nav-cta:hover{background:var(--yd)!important;color:var(--wh)!important}
+.nav-inbox-btn{background:none;border:1px solid #DDD;color:var(--bk);padding:.35rem .9rem;border-radius:2px;font-family:var(--fb);font-size:.78rem;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:.5rem;transition:all .2s;position:relative}
+.nav-inbox-btn:hover{border-color:var(--y);color:var(--yd)}
+.nav-inbox-badge{position:absolute;top:-5px;right:-5px;width:16px;height:16px;background:var(--danger);color:#fff;border-radius:50%;font-size:.55rem;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:var(--fm)}
 
 /* HERO */
 .hero{min-height:100vh;background:var(--bk2);display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:80px 3rem 3rem;position:relative;overflow:hidden}
-.hero::before{content:'On The Line';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--fd);font-size:28vw;color:rgba(245,197,24,.07);white-space:nowrap;pointer-events:none;user-select:none}
+.hero::before{content:'On The Line';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--fd);font-size:16vw;font-weight:700;color:rgba(245,197,24,.07);white-space:nowrap;pointer-events:none;user-select:none}
 .hero-text{position:relative;z-index:2}
 .hero-eyebrow{font-family:var(--fm);font-size:.72rem;color:var(--yd);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem}
-.hero-h1{font-family:var(--fd);font-size:clamp(3.5rem,7vw,6rem);line-height:.92;letter-spacing:.02em;color:var(--bk);margin-bottom:1.5rem}
+.hero-h1{font-family:var(--fd);font-size:clamp(2.8rem,5.5vw,5rem);font-weight:700;line-height:1.05;color:var(--bk);margin-bottom:1.5rem}
 .hero-h1 span{color:var(--yd)}
 .hero-sub{font-size:1rem;color:#555;line-height:1.75;max-width:440px;margin-bottom:2.5rem}
 .hero-stats{display:flex;gap:2.5rem;margin-bottom:2.5rem}
-.stat-num{font-family:var(--fd);font-size:2.2rem;color:var(--yd);letter-spacing:.02em}
+.stat-num{font-family:var(--fd);font-size:2.2rem;font-weight:700;color:var(--yd)}
 .stat-label{font-size:.72rem;color:#888;text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem}
 .hero-actions{display:flex;gap:1rem;align-items:center}
 .btn-primary{background:var(--bk);color:var(--wh);border:none;padding:.8rem 2rem;font-family:var(--fb);font-weight:600;font-size:.88rem;letter-spacing:.04em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:all .2s}
 .btn-primary:hover{background:#333;transform:translateY(-1px)}
 .btn-outline{background:transparent;color:var(--bk);border:1px solid #BBB;padding:.8rem 2rem;font-family:var(--fb);font-weight:500;font-size:.88rem;letter-spacing:.04em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:all .2s}
-.btn-outline:hover{border-color:var(--bk);color:var(--bk)}
-
+.btn-outline:hover{border-color:var(--bk)}
 .hero-visual{position:relative;z-index:2;display:flex;align-items:center;justify-content:center}
 .hero-image-wrap{position:relative;width:100%;max-width:520px;height:500px;overflow:hidden;border-radius:4px;background:var(--bk3)}
-.hero-image{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.hero-image-wrap:hover .hero-image{transform:scale(1.05)}
-
 .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:#AAA;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;animation:bob 2s ease-in-out infinite}
 .scroll-arrow{width:28px;height:28px;border:1px solid #CCC;border-radius:50%;display:flex;align-items:center;justify-content:center}
 .scroll-arrow::after{content:'';width:6px;height:6px;border-right:1.5px solid var(--yd);border-bottom:1.5px solid var(--yd);transform:rotate(45deg) translateY(-2px)}
 @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
 
-/* MISSION TICKER */
+/* TICKER */
 .mission-strip{background:var(--y);padding:0 3rem;height:44px;display:flex;align-items:center;gap:2rem;overflow:hidden}
-.mission-label{font-family:var(--fd);font-size:1rem;color:var(--bk);white-space:nowrap;letter-spacing:.05em;min-width:110px}
+.mission-label{font-family:var(--fd);font-weight:600;font-size:1rem;color:var(--bk);white-space:nowrap;min-width:110px}
 .mission-mask{overflow:hidden;flex:1;-webkit-mask:linear-gradient(90deg,transparent,black 4%,black 96%,transparent);mask:linear-gradient(90deg,transparent,black 4%,black 96%,transparent)}
 .mission-track{display:flex;gap:3rem;animation:ticker 30s linear infinite;width:max-content}
 .mission-item{font-size:.8rem;font-weight:500;color:var(--bk2);white-space:nowrap;display:flex;align-items:center;gap:.7rem}
@@ -69,9 +68,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--wh);display
 /* BROWSE */
 section{padding:5.5rem 3rem}
 .browse{background:var(--wh)}
-.sec-eyebrow{font-family:var(--fm);font-size:.68rem;color:var(--y);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem}
-.sec-h2{font-family:var(--fd);font-size:clamp(2.2rem,4.5vw,3.5rem);letter-spacing:.03em;line-height:.95;margin-bottom:1.5rem}
-
+.sec-eyebrow{font-family:var(--fm);font-size:.68rem;color:var(--yd);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem}
+.sec-h2{font-family:var(--fd);font-weight:700;font-size:clamp(2.2rem,4.5vw,3.2rem);margin-bottom:1.5rem}
 .filter-bar{background:var(--bk3);border-radius:4px;padding:1.25rem 1.75rem;display:flex;gap:.8rem;align-items:center;margin-bottom:2.5rem;flex-wrap:wrap}
 .fl{font-family:var(--fm);font-size:.65rem;color:var(--yd);text-transform:uppercase;letter-spacing:.12em;margin-right:.3rem;white-space:nowrap}
 .fsel,.finp{background:var(--wh);color:var(--bk);border:1px solid #CCC;border-radius:2px;padding:.4rem .8rem;font-family:var(--fb);font-size:.8rem;outline:none;transition:border-color .2s;appearance:none}
@@ -81,93 +79,38 @@ section{padding:5.5rem 3rem}
 .finp{min-width:180px}
 .filter-btn{background:var(--bk);color:var(--wh);border:none;padding:.42rem 1.2rem;font-family:var(--fb);font-weight:600;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:background .2s;margin-left:auto}
 .filter-btn:hover{background:#333}
-
 .instructors-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem}
 .instructor-card{background:var(--wh);border:1px solid #DDD;border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .25s,transform .25s,box-shadow .25s;text-decoration:none;color:inherit;display:block}
 .instructor-card:hover{border-color:var(--y);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
 .card-img{width:100%;height:160px;background:var(--bk3);display:flex;align-items:center;justify-content:center;position:relative}
-.card-initials{font-family:var(--fd);font-size:3.5rem;color:#C5C2BB;letter-spacing:.05em}
+.card-initials{font-family:var(--fd);font-size:3.5rem;font-weight:700;color:#C5C2BB}
 .card-tag{position:absolute;top:.7rem;right:.7rem;background:var(--y);color:var(--bk);font-family:var(--fm);font-size:.6rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;border-radius:2px}
 .card-body{padding:1.1rem 1.25rem}
-.card-name{font-family:var(--fd);font-size:1.35rem;color:var(--bk);letter-spacing:.03em;margin-bottom:.25rem}
+.card-name{font-family:var(--fd);font-weight:600;font-size:1.1rem;color:var(--bk);margin-bottom:.25rem}
 .card-exp{font-size:.76rem;color:#888;margin-bottom:.85rem;line-height:1.5}
 .card-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.9rem}
 .ctag{font-family:var(--fm);font-size:.58rem;color:#888;background:#F5F3EF;border:1px solid #E0DED9;padding:.18rem .5rem;border-radius:2px;letter-spacing:.06em}
 .card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:.9rem;border-top:1px solid #EEE}
-.card-price{font-family:var(--fd);font-size:1.35rem;color:var(--bk)}
+.card-price{font-family:var(--fd);font-weight:700;font-size:1.2rem;color:var(--bk)}
 .card-psub{font-size:.65rem;color:#AAA}
 .card-mode{font-size:.7rem;font-weight:500;color:#AAA}
 
-/* DETAIL PAGE (new tab view) */
-.detail-page{min-height:100vh;background:var(--bk2);padding:90px 3rem 4rem}
-.detail-back{display:inline-flex;align-items:center;gap:.5rem;color:#888;font-size:.78rem;text-decoration:none;margin-bottom:2rem;font-family:var(--fm);letter-spacing:.08em;text-transform:uppercase}
-.detail-back:hover{color:var(--yd)}
-.detail-panel{background:var(--wh);border:1px solid #DDD;border-radius:4px;width:100%;max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;overflow:hidden;position:relative;box-shadow:0 8px 30px rgba(0,0,0,.06)}
-.detail-left{background:var(--bk2);border-right:1px solid #E5E3DE;padding:2.5rem 2rem}
-.detail-avatar{width:80px;height:80px;border-radius:50%;background:var(--bk3);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:2.2rem;color:#B0ADA6;border:2px solid #DDD;margin-bottom:1.5rem}
-.detail-name{font-family:var(--fd);font-size:2rem;color:var(--bk);letter-spacing:.03em;margin-bottom:.3rem}
-.detail-instr{font-family:var(--fm);font-size:.68rem;color:var(--yd);text-transform:uppercase;letter-spacing:.12em;margin-bottom:1.5rem}
-.detail-bio{font-size:.85rem;color:#666;line-height:1.8;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid #E5E3DE}
-.dmeta{display:flex;gap:.6rem;align-items:flex-start;margin-bottom:.65rem}
-.dmi{font-size:.7rem;color:var(--yd);min-width:14px;margin-top:.05rem}
-.dmt{font-size:.8rem;color:#888;line-height:1.5}
-.dmt strong{color:#444}
-
-.detail-right{padding:2.5rem 2rem}
-.detail-right h3{font-family:var(--fd);font-size:1.2rem;color:var(--bk);letter-spacing:.05em;margin-bottom:1.25rem}
-
-/* CALENDAR */
-.cal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.9rem}
-.cal-month{font-family:var(--fd);font-size:1rem;color:var(--bk);letter-spacing:.08em}
-.cal-nav{background:none;border:1px solid #DDD;color:#AAA;width:26px;height:26px;border-radius:2px;cursor:pointer;font-size:.75rem;transition:all .2s;display:flex;align-items:center;justify-content:center}
-.cal-nav:hover{border-color:var(--yd);color:var(--yd)}
-.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
-.cal-dl{font-family:var(--fm);font-size:.55rem;color:#AAA;text-align:center;padding:.25rem 0;letter-spacing:.1em;text-transform:uppercase}
-.cal-day{aspect-ratio:1;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:#CCC;cursor:default;background:#F7F5F1;transition:all .15s}
-.cal-day.avail{background:rgba(245,197,24,.18);color:#7A6200;cursor:pointer}
-.cal-day.avail:hover{background:var(--y);color:var(--bk)}
-.cal-day.booked{background:rgba(192,57,43,.08);color:#C0392B;cursor:not-allowed}
-.cal-day.sel{background:var(--y);color:var(--bk);font-weight:600}
-.cal-day.today{outline:1px solid #CCC}
-
-.time-slots{margin-top:1.25rem;display:none}
-.time-slots.visible{display:block}
-.slots-label{font-family:var(--fm);font-size:.62rem;color:var(--yd);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.7rem}
-.slots-grid{display:flex;flex-wrap:wrap;gap:.4rem}
-.slot{background:var(--wh);border:1px solid #DDD;color:#888;font-size:.76rem;padding:.32rem .75rem;border-radius:2px;cursor:pointer;transition:all .15s;font-family:var(--fm)}
-.slot:hover{border-color:var(--yd);color:var(--yd)}
-.slot.taken{opacity:.3;cursor:not-allowed;pointer-events:none}
-.slot.chosen{background:var(--y);color:var(--bk);border-color:var(--y);font-weight:600}
-
-.booking-summary{margin-top:1.25rem;padding:.9rem 1.1rem;background:rgba(245,197,24,.06);border:1px solid rgba(200,155,0,.2);border-radius:2px;display:none}
-.booking-summary.visible{display:block}
-.bs-row{display:flex;justify-content:space-between;margin-bottom:.35rem}
-.bs-l{font-size:.76rem;color:#AAA}
-.bs-v{font-size:.76rem;color:var(--bk);font-weight:500}
-.bs-pr{display:flex;justify-content:space-between;margin-top:.7rem;padding-top:.7rem;border-top:1px solid rgba(200,155,0,.15)}
-.bs-pl{font-family:var(--fm);font-size:.65rem;color:#AAA;text-transform:uppercase;display:flex;align-items:center}
-.bs-p{font-family:var(--fd);font-size:1.3rem;color:var(--yd)}
-.book-now-btn{width:100%;margin-top:.9rem;background:var(--bk);color:var(--wh);border:none;padding:.7rem;font-family:var(--fb);font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:background .2s}
-.book-now-btn:hover{background:#333}
-
 /* WHY */
 .why{background:var(--bk2)}
-.why .sec-h2{color:var(--bk)}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
 .why-card{background:var(--wh);border:1px solid #DDD;border-radius:4px;padding:1.75rem;position:relative;overflow:hidden;transition:border-color .25s,box-shadow .25s}
 .why-card:hover{border-color:var(--y);box-shadow:0 4px 16px rgba(0,0,0,.06)}
-.why-num{font-family:var(--fd);font-size:5rem;color:rgba(0,0,0,.04);position:absolute;top:-.5rem;right:.8rem;line-height:1;pointer-events:none;user-select:none}
-.why-icon{width:34px;height:34px;background:rgba(245,197,24,.18);border-radius:3px;display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;font-size:.95rem}
-.why-title{font-family:var(--fd);font-size:1.15rem;color:var(--bk);letter-spacing:.04em;margin-bottom:.55rem}
+.why-num{font-family:var(--fd);font-size:5rem;font-weight:700;color:rgba(0,0,0,.04);position:absolute;top:-.5rem;right:.8rem;line-height:1;pointer-events:none;user-select:none}
+.why-icon{width:34px;height:34px;background:rgba(255,206,28,.2);border-radius:3px;display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;font-size:.95rem}
+.why-title{font-family:var(--fd);font-weight:600;font-size:1rem;color:var(--bk);margin-bottom:.55rem}
 .why-desc{font-size:.82rem;color:#888;line-height:1.75}
 
 /* ABOUT */
 .about{background:var(--y);padding:5.5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
 .about .sec-eyebrow{color:rgba(0,0,0,.4)}
-.about .sec-h2{color:var(--bk)}
-.about-body{font-size:.92rem;color:rgba(0,0,0,.6);line-height:1.8;margin-bottom:1.5rem}
+.about-body{font-size:.92rem;color:rgba(0,0,0,.65);line-height:1.8;margin-bottom:1.5rem}
 .about-stat-row{display:flex;gap:2rem}
-.astat-num{font-family:var(--fd);font-size:2.3rem;color:var(--bk)}
+.astat-num{font-family:var(--fd);font-weight:700;font-size:2.3rem;color:var(--bk)}
 .astat-label{font-size:.7rem;font-weight:500;color:rgba(0,0,0,.45);text-transform:uppercase;letter-spacing:.06em}
 .about-visual{display:flex;flex-direction:column;gap:1rem}
 .aq-card{background:var(--bk);border-radius:4px;padding:1.4rem}
@@ -175,12 +118,12 @@ section{padding:5.5rem 3rem}
 .aq-author{font-family:var(--fm);font-size:.62rem;color:var(--y);letter-spacing:.1em;text-transform:uppercase}
 .mini-cards{display:flex;gap:1rem}
 .mini-card{flex:1;background:rgba(0,0,0,.12);border-radius:4px;padding:1.1rem}
-.mc-num{font-family:var(--fd);font-size:1.7rem;color:var(--bk);letter-spacing:.02em}
-.mc-label{font-size:.7rem;color:rgba(0,0,0,.45);letter-spacing:.04em;margin-top:.2rem}
+.mc-num{font-family:var(--fd);font-weight:700;font-size:1.7rem;color:var(--bk)}
+.mc-label{font-size:.7rem;color:rgba(0,0,0,.45);margin-top:.2rem}
 
 /* FOOTER */
 footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem}
-.footer-logo{font-family:var(--fd);font-size:2.2rem;color:var(--bk);letter-spacing:.08em;display:block;margin-bottom:.8rem}
+.footer-logo{font-family:var(--fd);font-weight:700;font-size:1.3rem;color:var(--bk);display:block;margin-bottom:.8rem;text-decoration:none}
 .footer-tagline{font-size:.8rem;color:#AAA;line-height:1.7;max-width:220px}
 .footer-col h4{font-family:var(--fm);font-size:.62rem;color:#AAA;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.9rem}
 .footer-col a{display:block;color:#888;font-size:.8rem;text-decoration:none;margin-bottom:.45rem;transition:color .2s;cursor:pointer}
@@ -188,24 +131,189 @@ footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:g
 .footer-bottom{background:var(--bk3);border-top:1px solid #E0DED9;padding:1rem 3rem;display:flex;justify-content:space-between;align-items:center}
 .footer-copy{font-size:.68rem;color:#AAA;font-family:var(--fm)}
 
+/* ==============================
+   DETAIL PAGE
+   ============================== */
+.detail-page{min-height:100vh;background:var(--bk2);padding:80px 0 0}
+.detail-hero{background:var(--wh);border-bottom:1px solid #E5E3DE;padding:2.5rem 3rem 0}
+.detail-hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;gap:2rem;align-items:flex-start;padding-bottom:0}
+.detail-back-btn{display:inline-flex;align-items:center;gap:.5rem;color:#888;font-size:.75rem;font-family:var(--fm);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid #DDD;padding:.35rem .8rem;border-radius:2px;transition:all .2s;white-space:nowrap;margin-top:.2rem}
+.detail-back-btn:hover{border-color:var(--yd);color:var(--yd)}
+.detail-hero-info{}
+.detail-avatar{width:72px;height:72px;border-radius:50%;background:var(--bk3);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:700;font-size:1.8rem;color:#B0ADA6;border:2px solid #DDD;flex-shrink:0;margin-bottom:1rem}
+.detail-name{font-family:var(--fd);font-weight:700;font-size:2rem;color:var(--bk);margin-bottom:.2rem}
+.detail-instr{font-family:var(--fm);font-size:.68rem;color:var(--yd);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.8rem}
+.detail-meta-row{display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.detail-meta-item{font-size:.78rem;color:#888;display:flex;align-items:center;gap:.35rem}
+.detail-tabs{display:flex;gap:0;border-top:1px solid #EEE;margin-top:1rem}
+.dtab{padding:.75rem 1.5rem;font-size:.8rem;font-weight:500;color:#888;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;font-family:var(--fb);white-space:nowrap}
+.dtab:hover{color:var(--bk)}
+.dtab.active{color:var(--bk);border-bottom-color:var(--y)}
+
+.detail-body{max-width:1100px;margin:0 auto;padding:2rem 3rem 4rem;display:grid;grid-template-columns:1fr 380px;gap:2rem;align-items:start}
+
+/* Tab panels */
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+
+/* BOOK TAB */
+.book-panel{background:var(--wh);border:1px solid #DDD;border-radius:4px;padding:1.75rem}
+.book-panel h3{font-family:var(--fd);font-weight:600;font-size:1rem;color:var(--bk);margin-bottom:1.25rem}
+.cal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.9rem}
+.cal-month{font-family:var(--fd);font-weight:600;font-size:.95rem;color:var(--bk)}
+.cal-nav{background:none;border:1px solid #DDD;color:#AAA;width:26px;height:26px;border-radius:2px;cursor:pointer;font-size:.75rem;transition:all .2s;display:flex;align-items:center;justify-content:center}
+.cal-nav:hover{border-color:var(--yd);color:var(--yd)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+.cal-dl{font-family:var(--fm);font-size:.55rem;color:#AAA;text-align:center;padding:.25rem 0;letter-spacing:.1em;text-transform:uppercase}
+.cal-day{aspect-ratio:1;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:#CCC;cursor:default;background:#F7F5F1;transition:all .15s}
+.cal-day.avail{background:rgba(255,206,28,.18);color:#7A6200;cursor:pointer}
+.cal-day.avail:hover,.cal-day.sel{background:var(--y);color:var(--bk);font-weight:600}
+.cal-day.booked{background:rgba(192,57,43,.08);color:#C0392B;cursor:not-allowed}
+.cal-day.today{outline:1px solid #CCC}
+.time-slots{margin-top:1.25rem;display:none}
+.time-slots.visible{display:block}
+.slots-label{font-family:var(--fm);font-size:.62rem;color:var(--yd);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.7rem}
+.slots-grid{display:flex;flex-wrap:wrap;gap:.4rem}
+.slot{background:var(--wh);border:1px solid #DDD;color:#888;font-size:.76rem;padding:.32rem .75rem;border-radius:2px;cursor:pointer;transition:all .15s;font-family:var(--fm)}
+.slot:hover,.slot.chosen{border-color:var(--yd);color:var(--yd)}
+.slot.chosen{background:var(--y);color:var(--bk);border-color:var(--y);font-weight:600}
+.slot.taken{opacity:.3;cursor:not-allowed;pointer-events:none}
+.booking-summary{margin-top:1.25rem;padding:.9rem 1.1rem;background:rgba(255,206,28,.06);border:1px solid rgba(200,155,0,.2);border-radius:2px;display:none}
+.booking-summary.visible{display:block}
+.bs-row{display:flex;justify-content:space-between;margin-bottom:.35rem}
+.bs-l{font-size:.76rem;color:#AAA}
+.bs-v{font-size:.76rem;color:var(--bk);font-weight:500}
+.bs-pr{display:flex;justify-content:space-between;margin-top:.7rem;padding-top:.7rem;border-top:1px solid rgba(200,155,0,.15)}
+.bs-pl{font-family:var(--fm);font-size:.65rem;color:#AAA;text-transform:uppercase}
+.bs-p{font-family:var(--fd);font-weight:700;font-size:1.3rem;color:var(--yd)}
+.book-now-btn{width:100%;margin-top:.9rem;background:var(--bk);color:var(--wh);border:none;padding:.7rem;font-family:var(--fb);font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:background .2s}
+.book-now-btn:hover{background:#333}
+
+/* SIDEBAR */
+.detail-sidebar{}
+.sidebar-card{background:var(--wh);border:1px solid #DDD;border-radius:4px;padding:1.5rem;margin-bottom:1rem}
+.sidebar-card h4{font-family:var(--fd);font-weight:600;font-size:.9rem;color:var(--bk);margin-bottom:1rem}
+.detail-bio{font-size:.85rem;color:#666;line-height:1.8;margin-bottom:1rem}
+.dmeta{display:flex;gap:.6rem;align-items:flex-start;margin-bottom:.6rem}
+.dmi{font-size:.75rem;min-width:14px;margin-top:.05rem}
+.dmt{font-size:.8rem;color:#888;line-height:1.5}
+.dmt strong{color:#444}
+.detail-price-card{background:var(--bk);color:var(--wh);border-radius:4px;padding:1.25rem;margin-bottom:1rem}
+.dpc-rate{font-family:var(--fd);font-weight:700;font-size:2rem;color:var(--wh)}
+.dpc-sub{font-size:.72rem;color:#888;margin-bottom:1rem}
+.msg-instructor-btn{width:100%;background:var(--y);color:var(--bk);border:none;padding:.65rem;font-family:var(--fb);font-weight:700;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:all .2s}
+.msg-instructor-btn:hover{background:var(--yd);color:var(--wh)}
+
+/* ==============================
+   LOYALTY SYSTEM
+   ============================== */
+.loyalty-card{background:var(--wh);border:1px solid #DDD;border-radius:4px;padding:1.5rem}
+.loyalty-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem}
+.loyalty-title{font-family:var(--fd);font-weight:600;font-size:.9rem;color:var(--bk);display:flex;align-items:center;gap:.5rem}
+.loyalty-badge{background:var(--y);color:var(--bk);font-family:var(--fm);font-size:.55rem;font-weight:600;padding:.2rem .5rem;border-radius:2px;letter-spacing:.06em;text-transform:uppercase}
+.loyalty-count{font-family:var(--fm);font-size:.72rem;color:#888}
+.loyalty-punch-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem;margin-bottom:1rem}
+.punch{aspect-ratio:1;border-radius:50%;border:2px solid #E5E3DE;display:flex;align-items:center;justify-content:center;transition:all .3s;position:relative;font-size:.7rem}
+.punch.filled{background:var(--y);border-color:var(--y);color:var(--bk)}
+.punch.filled::after{content:'✓';font-size:.7rem;font-weight:700}
+.punch.free{background:var(--bk);border-color:var(--bk);color:var(--y)}
+.punch.free::after{content:'★';font-size:.8rem}
+.punch.empty::after{content:'○';color:#CCC}
+.loyalty-progress-wrap{margin-bottom:.75rem}
+.loyalty-progress-bar{height:4px;background:#EEE;border-radius:2px;overflow:hidden}
+.loyalty-progress-fill{height:100%;background:var(--y);border-radius:2px;transition:width .6s cubic-bezier(.34,1.56,.64,1)}
+.loyalty-label{font-size:.72rem;color:#888;margin-top:.4rem}
+.loyalty-label strong{color:var(--yd);font-weight:600}
+.loyalty-free-banner{background:rgba(255,206,28,.12);border:1px solid rgba(200,155,0,.25);border-radius:2px;padding:.7rem 1rem;font-size:.78rem;color:#7A6200;font-weight:500;display:none;margin-top:.75rem;text-align:center}
+.loyalty-free-banner.show{display:block}
+.loyalty-history{margin-top:.75rem;padding-top:.75rem;border-top:1px solid #EEE}
+.lh-title{font-family:var(--fm);font-size:.6rem;color:#AAA;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem}
+.lh-item{display:flex;justify-content:space-between;align-items:center;padding:.3rem 0;border-bottom:1px solid #F5F3EF;font-size:.75rem}
+.lh-item:last-child{border-bottom:none}
+.lh-date{color:#AAA}
+.lh-status{font-family:var(--fm);font-size:.6rem;padding:.15rem .4rem;border-radius:2px;letter-spacing:.05em}
+.lh-status.paid{background:rgba(39,174,96,.1);color:var(--success)}
+.lh-status.free{background:rgba(255,206,28,.15);color:var(--yd)}
+
+/* ==============================
+   MESSAGING INBOX
+   ============================== */
+.inbox-overlay{display:none;position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.4);backdrop-filter:blur(2px)}
+.inbox-overlay.open{display:flex;align-items:flex-end;justify-content:flex-end;padding:1rem}
+.inbox-panel{background:var(--wh);border:1px solid #DDD;border-radius:6px;width:420px;height:600px;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.15);animation:slideUp .25s cubic-bezier(.34,1.56,.64,1)}
+@keyframes slideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+.inbox-header{padding:1rem 1.25rem;border-bottom:1px solid #EEE;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.inbox-title{font-family:var(--fd);font-weight:700;font-size:1rem;color:var(--bk);display:flex;align-items:center;gap:.6rem}
+.inbox-title-dot{width:8px;height:8px;border-radius:50%;background:var(--y)}
+.inbox-close{background:none;border:none;color:#AAA;font-size:1.2rem;cursor:pointer;line-height:1;padding:.25rem;transition:color .2s}
+.inbox-close:hover{color:var(--bk)}
+.inbox-thread-list{flex:1;overflow-y:auto;border-right:none}
+.inbox-thread{padding:.9rem 1.25rem;border-bottom:1px solid #F5F3EF;cursor:pointer;transition:background .15s;display:flex;align-items:center;gap:.75rem}
+.inbox-thread:hover,.inbox-thread.active{background:var(--bk2)}
+.inbox-thread-avatar{width:36px;height:36px;border-radius:50%;background:var(--bk3);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:700;font-size:.85rem;color:#B0ADA6;flex-shrink:0}
+.inbox-thread-info{flex:1;min-width:0}
+.inbox-thread-name{font-size:.83rem;font-weight:600;color:var(--bk);margin-bottom:.15rem}
+.inbox-thread-preview{font-size:.72rem;color:#AAA;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.inbox-thread-time{font-size:.62rem;color:#CCC;font-family:var(--fm);flex-shrink:0}
+.inbox-thread.unread .inbox-thread-name{color:var(--bk)}
+.inbox-thread.unread .inbox-thread-preview{color:#555;font-weight:500}
+.inbox-unread-dot{width:7px;height:7px;border-radius:50%;background:var(--y);flex-shrink:0}
+
+/* Conversation view */
+.inbox-convo{display:none;flex-direction:column;flex:1;min-height:0}
+.inbox-convo.visible{display:flex}
+.inbox-convo-header{padding:.75rem 1.25rem;border-bottom:1px solid #EEE;display:flex;align-items:center;gap:.75rem;flex-shrink:0}
+.inbox-back{background:none;border:none;color:#888;cursor:pointer;font-size:.8rem;font-family:var(--fm);display:flex;align-items:center;gap:.3rem;padding:0;transition:color .2s}
+.inbox-back:hover{color:var(--bk)}
+.convo-name{font-family:var(--fd);font-weight:600;font-size:.9rem;color:var(--bk);flex:1}
+.convo-instrument{font-family:var(--fm);font-size:.6rem;color:var(--yd);text-transform:uppercase;letter-spacing:.08em}
+.inbox-messages{flex:1;overflow-y:auto;padding:1rem 1.25rem;display:flex;flex-direction:column;gap:.75rem}
+.msg-bubble{max-width:78%;padding:.6rem .9rem;border-radius:12px;font-size:.82rem;line-height:1.5}
+.msg-bubble.them{background:var(--bk3);color:var(--bk);border-bottom-left-radius:3px;align-self:flex-start}
+.msg-bubble.me{background:var(--bk);color:var(--wh);border-bottom-right-radius:3px;align-self:flex-end}
+.msg-bubble.me.yellow{background:var(--y);color:var(--bk)}
+.msg-time{font-size:.6rem;color:#BBB;margin-top:.2rem;font-family:var(--fm)}
+.msg-time.right{text-align:right}
+.inbox-input-row{padding:.75rem 1.25rem;border-top:1px solid #EEE;display:flex;gap:.5rem;flex-shrink:0}
+.inbox-input{flex:1;border:1px solid #DDD;border-radius:20px;padding:.5rem 1rem;font-family:var(--fb);font-size:.82rem;outline:none;transition:border-color .2s;resize:none;max-height:80px}
+.inbox-input:focus{border-color:var(--y)}
+.inbox-send{background:var(--y);color:var(--bk);border:none;width:34px;height:34px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s;align-self:flex-end}
+.inbox-send:hover{background:var(--yd)}
+.inbox-send svg{width:14px;height:14px}
+.inbox-list-view{display:flex;flex-direction:column;flex:1;overflow:hidden}
+.inbox-list-view.hidden{display:none}
+
 /* TOAST */
-.toast{position:fixed;bottom:2rem;right:2rem;z-index:999;background:var(--wh);border:1px solid #DDD;border-left:4px solid var(--y);padding:.9rem 1.4rem;border-radius:2px;font-size:.83rem;color:var(--bk);transform:translateY(120px);opacity:0;transition:all .35s cubic-bezier(.34,1.56,.64,1);max-width:300px;box-shadow:0 8px 24px rgba(0,0,0,.1)}
+.toast{position:fixed;bottom:2rem;right:2rem;z-index:999;background:var(--wh);border:1px solid #DDD;border-left:4px solid var(--y);padding:.9rem 1.4rem;border-radius:2px;font-size:.83rem;color:var(--bk);transform:translateY(120px);opacity:0;transition:all .35s cubic-bezier(.34,1.56,.64,1);max-width:320px;box-shadow:0 8px 24px rgba(0,0,0,.1)}
 .toast.show{transform:translateY(0);opacity:1}
-.toast-title{font-weight:600;color:var(--yd);margin-bottom:.2rem;font-family:var(--fd);font-size:.95rem;letter-spacing:.04em}
+.toast-title{font-weight:700;color:var(--yd);margin-bottom:.2rem;font-family:var(--fd);font-size:.95rem}
+
+/* ABOUT TAB */
+.about-tab-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+.about-tab-stat{background:var(--bk3);border-radius:4px;padding:1rem 1.25rem}
+.ats-num{font-family:var(--fd);font-weight:700;font-size:1.5rem;color:var(--bk)}
+.ats-label{font-size:.7rem;color:#888;text-transform:uppercase;letter-spacing:.05em;margin-top:.2rem;font-family:var(--fm)}
+.review-item{padding:1rem 0;border-bottom:1px solid #EEE}
+.review-item:last-child{border-bottom:none}
+.review-stars{color:var(--y);font-size:.85rem;margin-bottom:.3rem}
+.review-text{font-size:.82rem;color:#555;line-height:1.6;margin-bottom:.35rem}
+.review-author{font-family:var(--fm);font-size:.62rem;color:#AAA;text-transform:uppercase;letter-spacing:.08em}
 
 /* RESPONSIVE */
 @media(max-width:900px){
   nav{padding:0 1.5rem}
-  .nav-links a:not(.nav-cta){display:none}
+  .nav-links a:not(.nav-cta):not(.nav-inbox-btn){display:none}
   .hero{grid-template-columns:1fr;padding:90px 1.5rem 3rem}
   .hero-visual{display:none}
   .why-grid{grid-template-columns:1fr}
   .about{grid-template-columns:1fr}
-  .detail-panel{grid-template-columns:1fr}
-  .detail-left{border-right:none;border-bottom:1px solid #E5E3DE}
-  .detail-page{padding:80px 1.5rem 3rem}
+  .detail-body{grid-template-columns:1fr;padding:1.5rem}
+  .detail-hero{padding:1.5rem 1.5rem 0}
+  .detail-hero-inner{grid-template-columns:1fr;gap:1rem}
   footer{grid-template-columns:1fr 1fr;gap:1.5rem}
   section{padding:4rem 1.5rem}
+  .inbox-panel{width:100%;height:100%;border-radius:0}
+  .inbox-overlay{padding:0}
 }
 </style>
 </head>
@@ -213,13 +321,17 @@ footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:g
 
 <!-- ============ HOME VIEW ============ -->
 <div id="home-view">
-
 <nav>
-  <div class="nav-logo">On The Line</div>
+  <a class="nav-logo" href="./" style="text-decoration:none">On The Line</a>
   <div class="nav-links">
     <a href="#browse">Find Instructors</a>
     <a href="#why">Why OTL</a>
     <a href="#about">Our Mission</a>
+    <button class="nav-inbox-btn" onclick="openInbox()">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      Messages
+      <span class="nav-inbox-badge" id="inbox-badge">3</span>
+    </button>
     <a href="#browse" class="nav-cta">Book a Lesson</a>
   </div>
 </nav>
@@ -228,7 +340,7 @@ footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:g
   <div class="hero-text">
     <p class="hero-eyebrow">// Bay Area Marching Arts Platform</p>
     <h1 class="hero-h1">Level Up<br>Your March.<br>With <span>On The Line</span></h1>
-    <p class="hero-sub">Connect with Bay Area marching band professionals. One on one lessons in brass, battery, front ensemble, and visual online or in person, built around your schedule.</p>
+    <p class="hero-sub">Connect with Bay Area marching band professionals. One on one lessons in brass, battery, front ensemble, and visual — online or in person, built around your schedule.</p>
     <div class="hero-stats">
       <div><div class="stat-num">40+</div><div class="stat-label">Instructors</div></div>
       <div><div class="stat-num">12</div><div class="stat-label">Instruments</div></div>
@@ -240,43 +352,36 @@ footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:g
     </div>
   </div>
   <div class="hero-visual">
-    <div class="hero-image-wrap">
-      <img src="images/pic.jpg" class="hero-image" alt="">
-    </div>
+    <div class="hero-image-wrap"></div>
   </div>
-  <div class="scroll-hint">
-    <div class="scroll-arrow"></div>
-    <span>Scroll</span>
-  </div>
+  <div class="scroll-hint"><div class="scroll-arrow"></div><span>Scroll</span></div>
 </section>
 
 <div class="mission-strip">
   <span class="mission-label">On The Line ·</span>
-  <div class="mission-mask">
-    <div class="mission-track" id="ticker-track">
-      <span class="mission-item"><span class="mdot"></span>Bay Area Independent Circuit</span>
-      <span class="mission-item"><span class="mdot"></span>WBA · BOA · WGASC</span>
-      <span class="mission-item"><span class="mdot"></span>Blue Devils Alumni Instructors</span>
-      <span class="mission-item"><span class="mdot"></span>Online &amp; In-Person Sessions</span>
-      <span class="mission-item"><span class="mdot"></span>All Ages Welcome</span>
-      <span class="mission-item"><span class="mdot"></span>Flexible Scheduling</span>
-      <span class="mission-item"><span class="mdot"></span>Reviving Bay Area Independent Scene</span>
-      <span class="mission-item"><span class="mdot"></span>Battery · Brass · Front Ensemble · Visual</span>
-      <span class="mission-item"><span class="mdot"></span>Bay Area Independent Circuit</span>
-      <span class="mission-item"><span class="mdot"></span>WBA · BOA · WGASC</span>
-      <span class="mission-item"><span class="mdot"></span>Blue Devils Alumni Instructors</span>
-      <span class="mission-item"><span class="mdot"></span>Online &amp; In-Person Sessions</span>
-      <span class="mission-item"><span class="mdot"></span>All Ages Welcome</span>
-      <span class="mission-item"><span class="mdot"></span>Flexible Scheduling</span>
-      <span class="mission-item"><span class="mdot"></span>Reviving Bay Area Independent Scene</span>
-      <span class="mission-item"><span class="mdot"></span>Battery · Brass · Front Ensemble · Visual</span>
-    </div>
-  </div>
+  <div class="mission-mask"><div class="mission-track">
+    <span class="mission-item"><span class="mdot"></span>Bay Area Independent Circuit</span>
+    <span class="mission-item"><span class="mdot"></span>WBA · BOA · WGASC</span>
+    <span class="mission-item"><span class="mdot"></span>Blue Devils Alumni Instructors</span>
+    <span class="mission-item"><span class="mdot"></span>Online &amp; In-Person Sessions</span>
+    <span class="mission-item"><span class="mdot"></span>All Ages Welcome</span>
+    <span class="mission-item"><span class="mdot"></span>Flexible Scheduling</span>
+    <span class="mission-item"><span class="mdot"></span>Reviving Bay Area Independent Scene</span>
+    <span class="mission-item"><span class="mdot"></span>Battery · Brass · Front Ensemble · Visual</span>
+    <span class="mission-item"><span class="mdot"></span>Bay Area Independent Circuit</span>
+    <span class="mission-item"><span class="mdot"></span>WBA · BOA · WGASC</span>
+    <span class="mission-item"><span class="mdot"></span>Blue Devils Alumni Instructors</span>
+    <span class="mission-item"><span class="mdot"></span>Online &amp; In-Person Sessions</span>
+    <span class="mission-item"><span class="mdot"></span>All Ages Welcome</span>
+    <span class="mission-item"><span class="mdot"></span>Flexible Scheduling</span>
+    <span class="mission-item"><span class="mdot"></span>Reviving Bay Area Independent Scene</span>
+    <span class="mission-item"><span class="mdot"></span>Battery · Brass · Front Ensemble · Visual</span>
+  </div></div>
 </div>
 
 <section class="browse" id="browse">
   <p class="sec-eyebrow">// Find Your Instructor</p>
-  <h2 class="sec-h2">Browse Bay Area<br>Instructors</h2>
+  <h2 class="sec-h2">Browse Bay Area Instructors</h2>
   <div class="filter-bar">
     <span class="fl">Filter:</span>
     <select class="fsel" id="filt-instrument" onchange="filterCards()">
@@ -311,23 +416,23 @@ footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:g
 </section>
 
 <section class="why" id="why">
-  <p class="sec-eyebrow" style="color:var(--yd)">// Why On The Line</p>
-  <h2 class="sec-h2">Built For The<br>Independent Scene</h2>
+  <p class="sec-eyebrow">// Why On The Line</p>
+  <h2 class="sec-h2">Built For The Independent Scene</h2>
   <div class="why-grid">
-    <div class="why-card"><div class="why-num">01</div><div class="why-icon"></div><div class="why-title">Proffesionals Only</div><div class="why-desc">Every instructor with On The Line has verifiable DCI, WBA, or independent circuit experience to ensure the best education.</div></div>
-    <div class="why-card"><div class="why-num">02</div><div class="why-icon"></div><div class="why-title">Schedule Your Way</div><div class="why-desc">Book directly on the instructor's live calendar. Filter by online or in-person, pick the time that works, and confirm instantly.</div></div>
-    <div class="why-card"><div class="why-num">03</div><div class="why-icon"></div><div class="why-title">All Sections Welcome</div><div class="why-desc">With Staff covering battery, brass, front ensemble, and color guard, we offer the full ensemble so you can develop every part of your marching craft.</div></div>
-    <div class="why-card"><div class="why-num">04</div><div class="why-icon"></div><div class="why-title">Bay Area Focused</div><div class="why-desc">Instructors know Bay Area schools, groups, and audition seasons. Get advice that's actually relevant to where you compete and perform.</div></div>
-    <div class="why-card"><div class="why-num">05</div><div class="why-icon"></div><div class="why-title">Transparent Pricing</div><div class="why-desc">No hidden fees or subscription traps. See exactly what each session costs before you book, from $45 to $120 per hour depending on experience.</div></div>
-    <div class="why-card"><div class="why-num">06</div><div class="why-icon"></div><div class="why-title">Grow the Scene</div><div class="why-desc">With fewer than 10 active independent groups remaining in the Bay Area, On The Line exists to bridge the gap between talent and opportunity.</div></div>
+    <div class="why-card"><div class="why-num">01</div><div class="why-icon"></div><div class="why-title">Professionals Only</div><div class="why-desc">Every instructor has verifiable DCI, WBA, or independent circuit experience to ensure the best education.</div></div>
+    <div class="why-card"><div class="why-num">02</div><div class="why-icon"></div><div class="why-title">Schedule Your Way</div><div class="why-desc">Book directly on the instructor's live calendar. Filter by online or in-person, pick the time, and confirm instantly.</div></div>
+    <div class="why-card"><div class="why-num">03</div><div class="why-icon"></div><div class="why-title">All Sections Welcome</div><div class="why-desc">Battery, brass, front ensemble, and color guard — we cover the full ensemble so you can grow every part of your craft.</div></div>
+    <div class="why-card"><div class="why-num">04</div><div class="why-icon"></div><div class="why-title">Bay Area Focused</div><div class="why-desc">Instructors know Bay Area schools, groups, and audition seasons. Advice that's relevant to where you compete.</div></div>
+    <div class="why-card"><div class="why-num">05</div><div class="why-icon"></div><div class="why-title">Loyalty Rewards</div><div class="why-desc">Complete 10 lessons with any instructor and your 11th is free. Every session tracked automatically in your account.</div></div>
+    <div class="why-card"><div class="why-num">06</div><div class="why-icon"></div><div class="why-title">Grow the Scene</div><div class="why-desc">Fewer than 10 active independent groups remain in the Bay Area. On The Line bridges talent and opportunity.</div></div>
   </div>
 </section>
 
 <section class="about" id="about">
   <div class="about-text">
     <p class="sec-eyebrow">// Our Mission</p>
-    <h2 class="sec-h2">The Bay Area<br>Needs This.</h2>
-    <p class="about-body">The Bay Area is home to over 500,000 middle and high school students, yet fewer than 10 active independent marching groups remain. Lack of funding, declining school program participation, and inaccessible instruction are limmiting one of the most unique art forms in competitive music.</p>
+    <h2 class="sec-h2">The Bay Area Needs This.</h2>
+    <p class="about-body">The Bay Area is home to over 500,000 middle and high school students, yet fewer than 10 active independent marching groups remain. Lack of funding, declining school program participation, and inaccessible instruction are limiting one of the most unique art forms in competitive music.</p>
     <p class="about-body">On The Line was built to change that. By connecting students directly with working professionals, we're making elite instruction accessible to every student, at every level, regardless of what school or group they belong to.</p>
     <div class="about-stat-row">
       <div><div class="astat-num">&lt;10</div><div class="astat-label">Active Indie Groups in Bay Area</div></div>
@@ -349,7 +454,7 @@ footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:g
 
 <footer>
   <div>
-    <span class="footer-logo">On The Line</span>
+    <a class="footer-logo" href="./">On The Line</a>
     <p class="footer-tagline">Connecting Bay Area marching students with the professionals who can take them to the next level.</p>
   </div>
   <div class="footer-col"><h4>Platform</h4><a href="#browse">Find Instructors</a><a href="#">Become an Instructor</a><a href="#">How It Works</a><a href="#">Pricing</a></div>
@@ -360,58 +465,202 @@ footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:g
   <span class="footer-copy">© 2026 On The Line · Bay Area Marching Arts</span>
   <span class="footer-copy">Built to keep the scene alive.</span>
 </div>
-
 </div><!-- /home-view -->
 
-
-<!-- ============ DETAIL VIEW (shown when ?instructor=N) ============ -->
+<!-- ============ DETAIL VIEW ============ -->
 <div id="detail-view" style="display:none">
   <nav>
     <a class="nav-logo" href="./" style="text-decoration:none">On The Line</a>
     <div class="nav-links">
-      <a href="./">← All Instructors</a>
+      <button class="nav-inbox-btn" onclick="openInbox()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Messages
+        <span class="nav-inbox-badge" id="inbox-badge-detail">3</span>
+      </button>
     </div>
   </nav>
-  <div class="detail-page">
-    <div class="detail-panel" id="detail-panel">
-      <div class="detail-left" id="detail-left"></div>
-      <div class="detail-right" id="detail-right"></div>
+
+  <div class="detail-page" id="detail-page-wrap">
+    <!-- HERO HEADER -->
+    <div class="detail-hero">
+      <div class="detail-hero-inner">
+        <a class="detail-back-btn" href="./">← All Instructors</a>
+        <div class="detail-hero-info">
+          <div id="detail-avatar-hero" class="detail-avatar"></div>
+          <div id="detail-name-hero" class="detail-name"></div>
+          <div id="detail-instr-hero" class="detail-instr"></div>
+          <div class="detail-meta-row" id="detail-meta-row"></div>
+          <div class="detail-tabs" id="detail-tabs">
+            <div class="dtab active" onclick="switchTab('book',this)">Book a Lesson</div>
+            <div class="dtab" onclick="switchTab('about',this)">About &amp; Reviews</div>
+            <div class="dtab" onclick="switchTab('loyalty',this)">My Loyalty Card</div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="detail-body">
+      <!-- LEFT: Tab panels -->
+      <div>
+        <!-- BOOK TAB -->
+        <div class="tab-panel active" id="tab-book">
+          <div class="book-panel">
+            <h3>Select a Date</h3>
+            <div id="cal-wrap"></div>
+            <div class="time-slots" id="time-slots">
+              <div class="slots-label">Available Times</div>
+              <div class="slots-grid" id="slots-grid"></div>
+            </div>
+            <div class="booking-summary" id="booking-summary">
+              <div class="bs-row"><span class="bs-l">Date</span><span class="bs-v" id="bs-date"></span></div>
+              <div class="bs-row"><span class="bs-l">Time</span><span class="bs-v" id="bs-time"></span></div>
+              <div class="bs-row"><span class="bs-l">Instructor</span><span class="bs-v" id="bs-instr"></span></div>
+              <div class="bs-row"><span class="bs-l">Lessons with Instructor</span><span class="bs-v" id="bs-loyalty-count"></span></div>
+              <div class="bs-pr"><span class="bs-pl">Total</span><span class="bs-p" id="bs-price"></span></div>
+              <button class="book-now-btn" onclick="confirmBooking()">Confirm &amp; Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ABOUT TAB -->
+        <div class="tab-panel" id="tab-about">
+          <div class="book-panel">
+            <h3>About</h3>
+            <p class="detail-bio" id="about-bio"></p>
+            <div class="about-tab-grid" id="about-stats-grid"></div>
+            <div style="margin-top:1.5rem">
+              <h3 style="margin-bottom:1rem">Student Reviews</h3>
+              <div id="reviews-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LOYALTY TAB -->
+        <div class="tab-panel" id="tab-loyalty">
+          <div class="book-panel">
+            <h3 style="margin-bottom:.5rem">Your Loyalty Card</h3>
+            <p style="font-size:.82rem;color:#888;line-height:1.6;margin-bottom:1.5rem">Complete 10 lessons with this instructor and your 11th lesson is <strong style="color:var(--yd)">completely free</strong>. Your progress is tracked automatically every time you book.</p>
+            <div id="loyalty-full-card"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="detail-sidebar">
+        <div class="detail-price-card">
+          <div class="dpc-rate" id="sidebar-rate"></div>
+          <div class="dpc-sub">per 60 min session</div>
+          <button class="msg-instructor-btn" id="msg-btn" onclick="openInboxToInstructor()">
+            💬 Message Instructor
+          </button>
+        </div>
+        <div class="sidebar-card" id="sidebar-info"></div>
+        <!-- Loyalty mini widget in sidebar -->
+        <div class="loyalty-card" id="sidebar-loyalty"></div>
+      </div>
     </div>
   </div>
 </div>
 
+<!-- ============ MESSAGING INBOX ============ -->
+<div class="inbox-overlay" id="inbox-overlay" onclick="closeInboxOnBg(event)">
+  <div class="inbox-panel">
+    <div class="inbox-header">
+      <div class="inbox-title"><div class="inbox-title-dot"></div>Messages</div>
+      <button class="inbox-close" onclick="closeInbox()">✕</button>
+    </div>
+
+    <!-- Thread list -->
+    <div class="inbox-list-view" id="inbox-list-view">
+      <div id="inbox-thread-list" style="overflow-y:auto;flex:1"></div>
+    </div>
+
+    <!-- Conversation view -->
+    <div class="inbox-convo" id="inbox-convo">
+      <div class="inbox-convo-header">
+        <button class="inbox-back" onclick="backToList()">← Back</button>
+        <div style="flex:1">
+          <div class="convo-name" id="convo-name"></div>
+          <div class="convo-instrument" id="convo-instrument"></div>
+        </div>
+      </div>
+      <div class="inbox-messages" id="inbox-messages"></div>
+      <div class="inbox-input-row">
+        <textarea class="inbox-input" id="inbox-input" placeholder="Type a message..." rows="1" onkeydown="handleMsgKey(event)"></textarea>
+        <button class="inbox-send" onclick="sendMessage()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
 <div class="toast" id="toast">
   <div class="toast-title" id="toast-title"></div>
   <div id="toast-body"></div>
 </div>
 
 <script>
+/* ============================================================
+   DATA
+   ============================================================ */
 const INSTRUCTORS = [
-  {id:0,name:"Marcus Chen",initials:"MC",instrument:"Snare",exp:"Blue Devils 2018–2021 · DCI Finalist · 5 years teaching across Bay Area schools.",bio:"Marcus marched snare with the Blue Devils for four seasons, earning two gold medals. He specializes in rudiment development, technique refinement, and mental approach for competitive performers.",tags:["DCI","Battery","Advanced","Competitive"],price:65,mode:"Both",location:"San Jose, CA",avail:[3,5,8,10,12,15,17],booked:[6,11,20]},
-  {id:1,name:"Sofia Reyes",initials:"SR",instrument:"Trumpet",exp:"Pacific Crest 2019–2022 · Music Education graduate.",bio:"Sofia is a music education graduate who marched soprano with Pacific Crest. She focuses on tone production, range development, and ensemble intonation for brass players at all levels.",tags:["WBA","Brass","Beginner","Intermediate"],price:55,mode:"In-Person",location:"Oakland, CA",avail:[4,7,9,13,18,22],booked:[3,14,21]},
-  {id:2,name:"Jordan Park",initials:"JP",instrument:"Marimba",exp:"Santa Clara Vanguard 2020 · 6 years front ensemble teaching.",bio:"Jordan is a front ensemble specialist with SCV experience. A conservatory-trained percussionist who has worked with WGI groups across Northern California.",tags:["WGI","Front Ensemble","Marimba","All Levels"],price:70,mode:"Online",location:"Remote",avail:[2,5,9,14,16,20,23],booked:[7,10,17]},
-  {id:3,name:"Alexis Brown",initials:"AB",instrument:"Color Guard",exp:"Freelancers Indoor 2019 · 4 years guard caption head.",bio:"Alexis served as caption head for a WGI A class guard. She brings a background in dance and visual design, working with students on equipment, movement, and performance quality.",tags:["WGI","Guard","Visual","Movement"],price:50,mode:"In-Person",location:"Fremont, CA",avail:[6,8,11,15,19,24],booked:[4,12,22]},
-  {id:4,name:"Tyler Wong",initials:"TW",instrument:"Tuba",exp:"Golden Empire 2017–2019 · Private studio teacher.",bio:"Tyler marched contrabass with Golden Empire and has run a private brass studio in the East Bay for five years. Specializes in low brass fundamentals and marching technique.",tags:["DCI","Brass","Low Brass","Studio"],price:60,mode:"Both",location:"Hayward, CA",avail:[3,6,10,13,17,21],booked:[5,9,20]},
-  {id:5,name:"Maya Patel",initials:"MP",instrument:"Mellophone",exp:"Blue Devils B 2021–2022 · Bay Area high school director.",bio:"Maya marched mellophone with BDB and currently teaches at a Bay Area high school. She focuses on beginners through intermediate players preparing for HS marching and indoor programs.",tags:["DCI","Brass","Beginner","School Band"],price:50,mode:"Both",location:"Concord, CA",avail:[2,4,8,12,16,22],booked:[6,18,25]},
-  {id:6,name:"Drew Kim",initials:"DK",instrument:"Tenor",exp:"Mandarins 2020 · Percussion ensemble arranger.",bio:"Drew marched tenors with the Mandarins and works as a percussion arranger for local indoor groups. Expert in multi-tenor technique, quad independence, and musical expression.",tags:["DCI","Battery","Tenors","Arranger"],price:75,mode:"Online",location:"Remote",avail:[5,7,11,14,19,23],booked:[3,10,21]},
-  {id:7,name:"Chloe Santos",initials:"CS",instrument:"Bass Drum",exp:"Pacific Crest 2021 · Independent circuit educator.",bio:"Chloe marched bass with Pacific Crest and has been an independent educator for Bay Area winterguard and indoor drum lines. Focuses on bass technique, pulse, and ensemble lock.",tags:["WBA","Battery","Bass","Lock"],price:55,mode:"In-Person",location:"Santa Clara, CA",avail:[4,6,9,13,17,20],booked:[7,15,22]},
+  {id:0,name:"Marcus Chen",initials:"MC",instrument:"Snare",exp:"Blue Devils 2018–2021 · DCI Finalist · 5 years teaching across Bay Area schools.",bio:"Marcus marched snare with the Blue Devils for four seasons, earning two gold medals. He specializes in rudiment development, technique refinement, and mental approach for competitive performers. Marcus has worked with dozens of Bay Area high school and middle school students preparing for WBA and independent circuit auditions.",tags:["DCI","Battery","Advanced","Competitive"],price:65,mode:"Both",location:"San Jose, CA",avail:[3,5,8,10,12,15,17],booked:[6,11,20],reviews:[{stars:5,text:"Marcus completely transformed my technique in 6 sessions. My stroke consistency improved so much my director noticed immediately.",author:"High School Snare, Milpitas"},{stars:5,text:"Super knowledgeable, patient, and has a great eye for small details that make a huge difference.",author:"Middle School Student, San Jose"}]},
+  {id:1,name:"Sofia Reyes",initials:"SR",instrument:"Trumpet",exp:"Pacific Crest 2019–2022 · Music Education graduate.",bio:"Sofia is a music education graduate who marched soprano with Pacific Crest. She focuses on tone production, range development, and ensemble intonation for brass players at all levels. She is patient with beginners and pushes intermediate students to competition-ready standards.",tags:["WBA","Brass","Beginner","Intermediate"],price:55,mode:"In-Person",location:"Oakland, CA",avail:[4,7,9,13,18,22],booked:[3,14,21],reviews:[{stars:5,text:"Sofia helped me prepare for my high school audition and I made first chair. Could not recommend more.",author:"Trumpet, Oakland HS"},{stars:4,text:"Great teacher, very encouraging. Helped me get comfortable with upper register work.",author:"Beginner Trumpet, Fremont"}]},
+  {id:2,name:"Jordan Park",initials:"JP",instrument:"Marimba",exp:"Santa Clara Vanguard 2020 · 6 years front ensemble teaching.",bio:"Jordan is a front ensemble specialist with SCV experience. A conservatory-trained percussionist who has worked with WGI groups across Northern California. Jordan covers technique, musicality, mallet velocity, and stage presence for front ensemble players.",tags:["WGI","Front Ensemble","Marimba","All Levels"],price:70,mode:"Online",location:"Remote",avail:[2,5,9,14,16,20,23],booked:[7,10,17],reviews:[{stars:5,text:"Online lessons with Jordan are incredibly effective. They share screen to annotate music and it's the clearest instruction I've received.",author:"Marimba, WGI A Class"}]},
+  {id:3,name:"Alexis Brown",initials:"AB",instrument:"Color Guard",exp:"Freelancers Indoor 2019 · 4 years guard caption head.",bio:"Alexis served as caption head for a WGI A class guard. She brings a background in dance and visual design, working with students on equipment, movement, and performance quality.",tags:["WGI","Guard","Visual","Movement"],price:50,mode:"In-Person",location:"Fremont, CA",avail:[6,8,11,15,19,24],booked:[4,12,22],reviews:[{stars:5,text:"Alexis has a real gift for breaking down movement. Her feedback is always actionable and specific.",author:"Color Guard, Fremont HS"}]},
+  {id:4,name:"Tyler Wong",initials:"TW",instrument:"Tuba",exp:"Golden Empire 2017–2019 · Private studio teacher.",bio:"Tyler marched contrabass with Golden Empire and has run a private brass studio in the East Bay for five years. Specializes in low brass fundamentals and marching technique.",tags:["DCI","Brass","Low Brass","Studio"],price:60,mode:"Both",location:"Hayward, CA",avail:[3,6,10,13,17,21],booked:[5,9,20],reviews:[{stars:5,text:"Tyler is the real deal. Dropped my tone by a full octave in just four sessions.",author:"Tuba, East Bay"},{stars:4,text:"Great at explaining breathing mechanics. My sound has improved a lot.",author:"Low Brass, Hayward HS"}]},
+  {id:5,name:"Maya Patel",initials:"MP",instrument:"Mellophone",exp:"Blue Devils B 2021–2022 · Bay Area high school director.",bio:"Maya marched mellophone with BDB and currently teaches at a Bay Area high school. She focuses on beginners through intermediate players preparing for HS marching and indoor programs.",tags:["DCI","Brass","Beginner","School Band"],price:50,mode:"Both",location:"Concord, CA",avail:[2,4,8,12,16,22],booked:[6,18,25],reviews:[{stars:5,text:"Maya is so encouraging and knows exactly where beginners need to start. I learned more in 3 lessons than in a full semester of band class.",author:"Mellophone Beginner, Concord"}]},
+  {id:6,name:"Drew Kim",initials:"DK",instrument:"Tenor",exp:"Mandarins 2020 · Percussion ensemble arranger.",bio:"Drew marched tenors with the Mandarins and works as a percussion arranger for local indoor groups. Expert in multi-tenor technique, quad independence, and musical expression.",tags:["DCI","Battery","Tenors","Arranger"],price:75,mode:"Online",location:"Remote",avail:[5,7,11,14,19,23],booked:[3,10,21],reviews:[{stars:5,text:"Drew taught me to think of tenors as a melodic instrument, not just rhythmic. Changed how I approach everything.",author:"Tenors, Mandarins Ageout"}]},
+  {id:7,name:"Chloe Santos",initials:"CS",instrument:"Bass Drum",exp:"Pacific Crest 2021 · Independent circuit educator.",bio:"Chloe marched bass with Pacific Crest and has been an independent educator for Bay Area winterguard and indoor drum lines. Focuses on bass technique, pulse, and ensemble lock.",tags:["WBA","Battery","Bass","Lock"],price:55,mode:"In-Person",location:"Santa Clara, CA",avail:[4,6,9,13,17,20],booked:[7,15,22],reviews:[{stars:5,text:"Chloe's approach to pulse and internal timing has made me a completely different player.",author:"Bass 4, Bay Area Drumline"}]},
 ];
 
+/* Simulated lesson history per instructor (instructorId -> lessons completed) */
+const LOYALTY_DATA = {0:7, 1:3, 2:10, 3:1, 4:5, 5:0, 6:8, 7:2};
+const LOYALTY_HISTORY = {
+  0:[{date:"Apr 12",note:"1hr Snare Lesson"},{date:"Mar 29",note:"1hr Snare Lesson"},{date:"Mar 15",note:"1hr Snare Lesson",free:false}],
+  1:[{date:"Apr 18",note:"1hr Trumpet Lesson"},{date:"Apr 5",note:"1hr Trumpet Lesson"}],
+  2:[{date:"Apr 20",note:"1hr Marimba Lesson"},{date:"Apr 6",note:"1hr Marimba Lesson"},{date:"Mar 23",note:"FREE Lesson Redeemed",free:true}],
+  3:[{date:"Apr 14",note:"1hr Color Guard Lesson"}],
+  4:[{date:"Apr 15",note:"1hr Tuba Lesson"},{date:"Apr 1",note:"1hr Tuba Lesson"}],
+  5:[],
+  6:[{date:"Apr 10",note:"1hr Tenor Lesson"},{date:"Mar 25",note:"1hr Tenor Lesson"}],
+  7:[{date:"Apr 8",note:"1hr Bass Lesson"}],
+};
+
+/* Messaging threads */
+const MESSAGES = {
+  0:[
+    {from:"them",text:"Hey! Thanks for booking. Do you have a practice pad we can use, or should I bring mine?",time:"Apr 22"},
+    {from:"me",text:"I have one but it's pretty beat up — would you mind bringing yours?",time:"Apr 22"},
+    {from:"them",text:"No problem at all, I'll bring mine. See you Thursday!",time:"Apr 22"},
+  ],
+  1:[
+    {from:"them",text:"Hi! Looking forward to our first session. Any specific areas you want to focus on?",time:"Apr 20"},
+    {from:"me",text:"I'm really struggling with upper register — anything above high C is rough for me.",time:"Apr 20"},
+    {from:"them",text:"Perfect, that's very common. We'll spend the first half on breath support and then tackle range from there. See you soon!",time:"Apr 20"},
+  ],
+  6:[
+    {from:"them",text:"Your 10th lesson is coming up! After that your next one is FREE. Just wanted to give you a heads up 🎉",time:"Apr 19"},
+  ],
+};
+
 const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+let selectedDay=null, selectedSlot=null, currentInstructor=null;
+let calYear=2026, calMonth=3;
+let activeInboxThread=null;
 
-let selectedDay = null, selectedSlot = null, currentInstructor = null;
-let calYear = 2026, calMonth = 3;
-
-/* ======= LIST VIEW ======= */
+/* ============================================================
+   HOME: CARD LIST
+   ============================================================ */
 function renderCards(list){
   const grid = document.getElementById('instructors-grid');
-  if(list.length === 0){
-    grid.innerHTML = '<p style="color:#444;font-size:.85rem;grid-column:1/-1;padding:2rem 0;font-family:var(--fm)">No instructors match your filters. Try adjusting your search.</p>';
-    return;
-  }
-  // Each card is an <a target="_blank"> so a click opens the detail page in a new tab.
-  grid.innerHTML = list.map(i => `
-    <a class="instructor-card" href="?instructor=${i.id}" target="_blank" rel="noopener noreferrer">
+  if(!list.length){ grid.innerHTML='<p style="color:#888;grid-column:1/-1;padding:2rem 0;font-family:var(--fm);font-size:.82rem">No instructors match your filters.</p>'; return; }
+  grid.innerHTML = list.map(i=>`
+    <a class="instructor-card" href="?instructor=${i.id}">
       <div class="card-img">
         <div class="card-initials">${i.initials}</div>
         <div class="card-tag">${i.instrument}</div>
@@ -421,157 +670,365 @@ function renderCards(list){
         <div class="card-exp">${i.exp}</div>
         <div class="card-tags">${i.tags.map(t=>`<span class="ctag">${t}</span>`).join('')}</div>
         <div class="card-footer">
-          <div>
-            <div class="card-price">$${i.price}</div>
-            <div class="card-psub">per hour</div>
-          </div>
+          <div><div class="card-price">$${i.price}</div><div class="card-psub">per hour</div></div>
           <div class="card-mode">${i.mode}</div>
         </div>
       </div>
-    </a>
-  `).join('');
+    </a>`).join('');
 }
-
 function filterCards(){
-  const instr = document.getElementById('filt-instrument').value;
-  const mode = document.getElementById('filt-mode').value;
-  const price = parseInt(document.getElementById('filt-price').value) || Infinity;
-  const search = document.getElementById('filt-search').value.toLowerCase();
-  const filtered = INSTRUCTORS.filter(i => {
-    if(instr && i.instrument !== instr) return false;
-    if(mode && i.mode !== 'Both' && i.mode !== mode) return false;
-    if(i.price > price) return false;
+  const instr=document.getElementById('filt-instrument').value;
+  const mode=document.getElementById('filt-mode').value;
+  const price=parseInt(document.getElementById('filt-price').value)||Infinity;
+  const search=document.getElementById('filt-search').value.toLowerCase();
+  renderCards(INSTRUCTORS.filter(i=>{
+    if(instr && i.instrument!==instr) return false;
+    if(mode && i.mode!=='Both' && i.mode!==mode) return false;
+    if(i.price>price) return false;
     if(search && !i.name.toLowerCase().includes(search) && !i.exp.toLowerCase().includes(search) && !i.tags.join(' ').toLowerCase().includes(search)) return false;
     return true;
-  });
-  renderCards(filtered);
+  }));
 }
-
 function resetFilters(){
-  document.getElementById('filt-instrument').value='';
-  document.getElementById('filt-mode').value='';
-  document.getElementById('filt-price').value='';
+  ['filt-instrument','filt-mode','filt-price'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('filt-search').value='';
   renderCards(INSTRUCTORS);
 }
 
-/* ======= DETAIL VIEW ======= */
+/* ============================================================
+   DETAIL VIEW
+   ============================================================ */
+function renderDetail(instructor){
+  currentInstructor = instructor;
+  document.title = `${instructor.name} — On The Line`;
+
+  // Hero
+  document.getElementById('detail-avatar-hero').textContent = instructor.initials;
+  document.getElementById('detail-name-hero').textContent = instructor.name;
+  document.getElementById('detail-instr-hero').textContent = instructor.instrument;
+  document.getElementById('detail-meta-row').innerHTML = `
+    <span class="detail-meta-item"> ${instructor.location}</span>
+    <span class="detail-meta-item"> ${instructor.mode}</span>
+    <span class="detail-meta-item"> ${instructor.tags.join(' · ')}</span>`;
+
+  // Sidebar
+  document.getElementById('sidebar-rate').textContent = `$${instructor.price}`;
+  document.getElementById('sidebar-info').innerHTML = `
+    <h4>Instructor Info</h4>
+    <div class="dmeta"><span class="dmi"></span><span class="dmt"><strong>Location:</strong> ${instructor.location}</span></div>
+    <div class="dmeta"><span class="dmi"></span><span class="dmt"><strong>Mode:</strong> ${instructor.mode}</span></div>
+    <div class="dmeta"><span class="dmi"></span><span class="dmt">${instructor.tags.map(t=>`<span class="ctag">${t}</span>`).join(' ')}</span></div>`;
+
+  // About tab
+  document.getElementById('about-bio').textContent = instructor.bio;
+  document.getElementById('about-stats-grid').innerHTML = `
+    <div class="about-tab-stat"><div class="ats-num">$${instructor.price}</div><div class="ats-label">Per Hour</div></div>
+    <div class="about-tab-stat"><div class="ats-num">${instructor.mode}</div><div class="ats-label">Session Type</div></div>
+    <div class="about-tab-stat"><div class="ats-num">${instructor.tags[0]}</div><div class="ats-label">Circuit</div></div>
+    <div class="about-tab-stat"><div class="ats-num">${LOYALTY_DATA[instructor.id]}/10</div><div class="ats-label">Your Lessons</div></div>`;
+  document.getElementById('reviews-list').innerHTML = instructor.reviews.map(r=>`
+    <div class="review-item">
+      <div class="review-stars">${'★'.repeat(r.stars)}${'☆'.repeat(5-r.stars)}</div>
+      <div class="review-text">${r.text}</div>
+      <div class="review-author">— ${r.author}</div>
+    </div>`).join('');
+
+  // Calendar
+  document.getElementById('cal-wrap').innerHTML = buildCalendar(instructor);
+
+  // Render loyalty in sidebar + full tab
+  renderLoyalty(instructor);
+}
+
+/* ============================================================
+   LOYALTY SYSTEM
+   ============================================================ */
+function renderLoyalty(instructor){
+  const count = LOYALTY_DATA[instructor.id] || 0;
+  const GOAL = 10;
+  const isFree = count >= GOAL;
+  const nextFreeIn = isFree ? 0 : GOAL - count;
+  const history = LOYALTY_HISTORY[instructor.id] || [];
+
+  // Build 10 punches + 1 free star
+  function buildPunches(){
+    let html = '<div class="loyalty-punch-grid">';
+    for(let i=1;i<=GOAL;i++){
+      if(i<=count) html+=`<div class="punch filled" title="Lesson ${i} complete"></div>`;
+      else html+=`<div class="punch empty" title="Lesson ${i}"></div>`;
+    }
+    html+=`<div class="punch free" title="11th lesson FREE!"></div>`;
+    html+='</div>';
+    return html;
+  }
+
+  const pct = Math.min((count/GOAL)*100,100);
+  const progressHtml = `
+    <div class="loyalty-progress-wrap">
+      <div class="loyalty-progress-bar"><div class="loyalty-progress-fill" style="width:${pct}%"></div></div>
+      <div class="loyalty-label">${isFree ? '<strong>🎉 You have a free lesson ready!</strong>' : `<strong>${nextFreeIn} more lesson${nextFreeIn!==1?'s':''}</strong> until your free lesson`}</div>
+    </div>`;
+
+  const freeBanner = isFree ? `<div class="loyalty-free-banner show">🎉 Your next lesson with ${instructor.name} is FREE — it will auto-apply at checkout.</div>` : '';
+
+  const historyHtml = history.length ? `
+    <div class="loyalty-history">
+      <div class="lh-title">Recent Sessions</div>
+      ${history.map(h=>`<div class="lh-item"><span>${h.note}</span><span class="lh-date">${h.date}</span><span class="lh-status ${h.free?'free':'paid'}">${h.free?'FREE':'PAID'}</span></div>`).join('')}
+    </div>` : '';
+
+  // Sidebar mini loyalty card
+  document.getElementById('sidebar-loyalty').innerHTML = `
+    <div class="loyalty-header">
+      <div class="loyalty-title">⭐ Loyalty Card <span class="loyalty-badge">Punch Card</span></div>
+      <div class="loyalty-count">${count}/${GOAL}</div>
+    </div>
+    ${buildPunches()}
+    ${progressHtml}
+    ${freeBanner}
+    ${historyHtml}`;
+
+  // Full loyalty tab
+  document.getElementById('loyalty-full-card').innerHTML = `
+    <div style="background:var(--bk3);border-radius:4px;padding:1.5rem;margin-bottom:1.25rem">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem">
+        <div>
+          <div style="font-family:var(--fd);font-weight:700;font-size:1.1rem;color:var(--bk)">Punch Card — ${instructor.name}</div>
+          <div style="font-family:var(--fm);font-size:.62rem;color:var(--yd);text-transform:uppercase;letter-spacing:.1em;margin-top:.2rem">${instructor.instrument}</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-family:var(--fd);font-weight:700;font-size:1.8rem;color:var(--bk)">${count}<span style="font-size:1rem;color:#AAA;font-weight:400">/${GOAL}</span></div>
+          <div style="font-size:.68rem;color:#AAA;font-family:var(--fm)">LESSONS</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(11,1fr);gap:.4rem;margin-bottom:1.25rem">
+        ${Array.from({length:10},(_,i)=>`<div style="aspect-ratio:1;border-radius:50%;border:2px solid ${i<count?'var(--y)':'#DDD'};background:${i<count?'var(--y)':'#F7F5F1'};display:flex;align-items:center;justify-content:center;font-size:.55rem;font-weight:700;color:${i<count?'var(--bk)':'#CCC'}">${i<count?'✓':i+1}</div>`).join('')}
+        <div style="aspect-ratio:1;border-radius:50%;border:2px solid ${isFree?'var(--bk)':'#DDD'};background:${isFree?'var(--bk)':'#F7F5F1'};display:flex;align-items:center;justify-content:center;font-size:.7rem;color:${isFree?'var(--y)':'#CCC'}">★</div>
+      </div>
+      ${progressHtml}
+      ${freeBanner}
+    </div>
+    <div style="background:var(--wh);border:1px solid #DDD;border-radius:4px;padding:1.25rem">
+      <div style="font-family:var(--fd);font-weight:600;font-size:.9rem;color:var(--bk);margin-bottom:1rem">How It Works</div>
+      <div style="display:flex;flex-direction:column;gap:.75rem">
+        <div style="display:flex;gap:.75rem;align-items:flex-start"><div style="width:24px;height:24px;border-radius:50%;background:var(--y);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:700;flex-shrink:0">1</div><div style="font-size:.82rem;color:#666;line-height:1.5">Book and complete lessons with ${instructor.name}. Each confirmed session counts toward your punch card.</div></div>
+        <div style="display:flex;gap:.75rem;align-items:flex-start"><div style="width:24px;height:24px;border-radius:50%;background:var(--y);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:700;flex-shrink:0">2</div><div style="font-size:.82rem;color:#666;line-height:1.5">After 10 lessons, a free lesson credit is automatically added to your account — no coupon codes needed.</div></div>
+        <div style="display:flex;gap:.75rem;align-items:flex-start"><div style="width:24px;height:24px;border-radius:50%;background:var(--y);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:700;flex-shrink:0">3</div><div style="font-size:.82rem;color:#666;line-height:1.5">Your free lesson is applied at checkout on your next booking with this instructor. The counter then resets for the next card.</div></div>
+      </div>
+    </div>
+    ${history.length ? `
+    <div style="background:var(--wh);border:1px solid #DDD;border-radius:4px;padding:1.25rem;margin-top:1rem">
+      <div style="font-family:var(--fd);font-weight:600;font-size:.9rem;color:var(--bk);margin-bottom:.75rem">Session History</div>
+      ${history.map(h=>`<div class="lh-item"><span style="font-size:.78rem">${h.note}</span><span class="lh-date">${h.date}</span><span class="lh-status ${h.free?'free':'paid'}">${h.free?'FREE':'PAID'}</span></div>`).join('')}
+    </div>` : ''}`;
+}
+
+/* ============================================================
+   CALENDAR + BOOKING
+   ============================================================ */
 function buildCalendar(instr){
-  const firstDay = new Date(calYear, calMonth, 1).getDay();
-  const daysInMonth = new Date(calYear, calMonth+1, 0).getDate();
+  const firstDay = new Date(calYear,calMonth,1).getDay();
+  const daysInMonth = new Date(calYear,calMonth+1,0).getDate();
   const today = 23;
   let html = `<div class="cal-header">
     <button class="cal-nav" onclick="prevMonth()">&#8249;</button>
     <span class="cal-month">${MONTH_NAMES[calMonth]} ${calYear}</span>
     <button class="cal-nav" onclick="nextMonth()">&#8250;</button>
   </div><div class="cal-grid">`;
-  ['S','M','T','W','T','F','S'].forEach(d => html += `<div class="cal-dl">${d}</div>`);
-  for(let i=0;i<firstDay;i++) html += `<div class="cal-day"></div>`;
+  ['S','M','T','W','T','F','S'].forEach(d=>html+=`<div class="cal-dl">${d}</div>`);
+  for(let i=0;i<firstDay;i++) html+=`<div class="cal-day"></div>`;
   for(let d=1;d<=daysInMonth;d++){
     let cls='cal-day';
     if(instr.avail.includes(d)) cls+=' avail';
     else if(instr.booked.includes(d)) cls+=' booked';
-    if(calMonth===3 && d===today) cls+=' today';
-    const clickable = instr.avail.includes(d);
-    html += `<div class="${cls}" ${clickable?`onclick="selectDay(${d})"`:''}>${d}</div>`;
+    if(calMonth===3&&d===today) cls+=' today';
+    html+=`<div class="${cls}" ${instr.avail.includes(d)?`onclick="selectDay(${d})"`:''}>${d}</div>`;
   }
-  html += '</div>';
-  return html;
+  return html+'</div>';
 }
 
 function selectDay(d){
-  selectedDay = d;
-  selectedSlot = null;
+  selectedDay=d; selectedSlot=null;
   document.querySelectorAll('.cal-day').forEach(el=>{
     el.classList.remove('sel');
-    if(el.textContent == d && el.classList.contains('avail')) el.classList.add('sel');
+    if(el.textContent==d && el.classList.contains('avail')) el.classList.add('sel');
   });
+  const timeSlots=['9:00 AM','10:00 AM','11:00 AM','1:00 PM','2:00 PM','3:30 PM','4:30 PM','6:00 PM'];
+  const taken=['10:00 AM','2:00 PM'];
+  document.getElementById('slots-grid').innerHTML = timeSlots.map(t=>`<div class="slot${taken.includes(t)?' taken':''}" onclick="selectSlot(this,'${t}')">${t}</div>`).join('');
   document.getElementById('time-slots').classList.add('visible');
-  document.querySelectorAll('.slot').forEach(s => s.classList.remove('chosen'));
+  document.querySelectorAll('.slot').forEach(s=>s.classList.remove('chosen'));
   document.getElementById('booking-summary').classList.remove('visible');
 }
 
-function selectSlot(el, time){
-  selectedSlot = time;
-  document.querySelectorAll('.slot').forEach(s => s.classList.remove('chosen'));
+function selectSlot(el,time){
+  selectedSlot=time;
+  document.querySelectorAll('.slot').forEach(s=>s.classList.remove('chosen'));
   el.classList.add('chosen');
-  const i = currentInstructor;
-  const summary = document.getElementById('booking-summary');
-  summary.classList.add('visible');
-  summary.querySelector('#bs-date').textContent = `${MONTH_NAMES[calMonth]} ${selectedDay}, ${calYear}`;
-  summary.querySelector('#bs-time').textContent = time;
-  summary.querySelector('#bs-instr').textContent = i.name;
-  summary.querySelector('#bs-price').textContent = `$${i.price}`;
+  const i=currentInstructor;
+  const count=LOYALTY_DATA[i.id]||0;
+  const isFree=count>=10;
+  document.getElementById('bs-date').textContent=`${MONTH_NAMES[calMonth]} ${selectedDay}, ${calYear}`;
+  document.getElementById('bs-time').textContent=time;
+  document.getElementById('bs-instr').textContent=i.name;
+  document.getElementById('bs-loyalty-count').textContent=`${count}/10${isFree?' (FREE lesson ready!)':''}`;
+  document.getElementById('bs-price').textContent=isFree?'FREE — Loyalty Reward':'$'+i.price;
+  document.getElementById('booking-summary').classList.add('visible');
 }
 
-function prevMonth(){
-  calMonth--; if(calMonth<0){calMonth=11;calYear--;}
-  document.getElementById('cal-wrap').innerHTML = buildCalendar(currentInstructor);
-}
-function nextMonth(){
-  calMonth++; if(calMonth>11){calMonth=0;calYear++;}
-  document.getElementById('cal-wrap').innerHTML = buildCalendar(currentInstructor);
-}
-
-function renderDetail(i){
-  currentInstructor = i;
-  document.title = `${i.name} — On The Line`;
-
-  document.getElementById('detail-left').innerHTML = `
-    <div class="detail-avatar">${i.initials}</div>
-    <div class="detail-name">${i.name}</div>
-    <div class="detail-instr">${i.instrument}</div>
-    <p class="detail-bio">${i.bio}</p>
-    <div class="dmeta"><span class="dmi">📍</span><span class="dmt"><strong>Location:</strong> ${i.location}</span></div>
-    <div class="dmeta"><span class="dmi">💻</span><span class="dmt"><strong>Mode:</strong> ${i.mode}</span></div>
-    <div class="dmeta"><span class="dmi">💰</span><span class="dmt"><strong>Rate:</strong> $${i.price} / 60 min</span></div>
-    <div class="dmeta"><span class="dmi">🏷</span><span class="dmt">${i.tags.map(t=>`<span class="ctag">${t}</span>`).join(' ')}</span></div>
-  `;
-
-  const timeSlots = ['9:00 AM','10:00 AM','11:00 AM','1:00 PM','2:00 PM','3:30 PM','4:30 PM','6:00 PM'];
-  const takenSlots = ['10:00 AM','2:00 PM'];
-
-  document.getElementById('detail-right').innerHTML = `
-    <h3>Select a Date &amp; Time</h3>
-    <div id="cal-wrap">${buildCalendar(i)}</div>
-    <div class="time-slots" id="time-slots">
-      <div class="slots-label">Available Times</div>
-      <div class="slots-grid">
-        ${timeSlots.map(t => `<div class="slot${takenSlots.includes(t)?' taken':''}" onclick="selectSlot(this,'${t}')">${t}</div>`).join('')}
-      </div>
-    </div>
-    <div class="booking-summary" id="booking-summary">
-      <div class="bs-row"><span class="bs-l">Date</span><span class="bs-v" id="bs-date"></span></div>
-      <div class="bs-row"><span class="bs-l">Time</span><span class="bs-v" id="bs-time"></span></div>
-      <div class="bs-row"><span class="bs-l">Instructor</span><span class="bs-v" id="bs-instr"></span></div>
-      <div class="bs-pr"><span class="bs-pl">Total</span><span class="bs-p" id="bs-price"></span></div>
-      <button class="book-now-btn" onclick="confirmBooking()">Confirm &amp; Book Now</button>
-    </div>
-  `;
-}
+function prevMonth(){ calMonth--; if(calMonth<0){calMonth=11;calYear--;} document.getElementById('cal-wrap').innerHTML=buildCalendar(currentInstructor); }
+function nextMonth(){ calMonth++; if(calMonth>11){calMonth=0;calYear++;} document.getElementById('cal-wrap').innerHTML=buildCalendar(currentInstructor); }
 
 function confirmBooking(){
-  if(!selectedDay || !selectedSlot) return;
-  showToast('Booking Confirmed!', `Session with ${currentInstructor.name} on ${MONTH_NAMES[calMonth]} ${selectedDay} at ${selectedSlot}`);
+  if(!selectedDay||!selectedSlot) return;
+  const i=currentInstructor;
+  const wasFree=LOYALTY_DATA[i.id]>=10;
+  if(wasFree){ LOYALTY_DATA[i.id]=0; }
+  else { LOYALTY_DATA[i.id]=(LOYALTY_DATA[i.id]||0)+1; }
+  LOYALTY_HISTORY[i.id].unshift({date:'Apr '+selectedDay,note:'1hr '+i.instrument+' Lesson',free:wasFree});
+  renderLoyalty(i);
+  const newCount=LOYALTY_DATA[i.id];
+  let toastBody=`${MONTH_NAMES[calMonth]} ${selectedDay} at ${selectedSlot} with ${i.name}.`;
+  if(newCount===10) toastBody+=`  10 lessons done — your next one is FREE!`;
+  else if(!wasFree) toastBody+=` Lesson ${newCount}/10 on your loyalty card.`;
+  showToast(wasFree?' Free Lesson Booked!':'Booking Confirmed!',toastBody);
+  document.getElementById('booking-summary').classList.remove('visible');
+  document.getElementById('time-slots').classList.remove('visible');
+  selectedDay=null; selectedSlot=null;
+  document.querySelectorAll('.cal-day').forEach(el=>el.classList.remove('sel'));
 }
 
-function showToast(title, body){
-  const t = document.getElementById('toast');
-  document.getElementById('toast-title').textContent = title;
-  document.getElementById('toast-body').textContent = body;
+/* ============================================================
+   TABS
+   ============================================================ */
+function switchTab(name,el){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.dtab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  el.classList.add('active');
+}
+
+/* ============================================================
+   MESSAGING INBOX
+   ============================================================ */
+function openInbox(){
+  document.getElementById('inbox-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  renderThreadList();
+  // Update badge
+  document.getElementById('inbox-badge')&&(document.getElementById('inbox-badge').style.display='none');
+  document.getElementById('inbox-badge-detail')&&(document.getElementById('inbox-badge-detail').style.display='none');
+}
+
+function closeInbox(){
+  document.getElementById('inbox-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function closeInboxOnBg(e){ if(e.target===document.getElementById('inbox-overlay')) closeInbox(); }
+
+function renderThreadList(){
+  showListView();
+  const threads = INSTRUCTORS.filter(i=>MESSAGES[i.id]&&MESSAGES[i.id].length>0);
+  const unreadIds=[6]; // instructor 6 is unread
+  document.getElementById('inbox-thread-list').innerHTML = threads.map(i=>{
+    const msgs=MESSAGES[i.id];
+    const last=msgs[msgs.length-1];
+    const isUnread=unreadIds.includes(i.id);
+    return `<div class="inbox-thread${isUnread?' unread':''}" onclick="openThread(${i.id})">
+      <div class="inbox-thread-avatar">${i.initials}</div>
+      <div class="inbox-thread-info">
+        <div class="inbox-thread-name">${i.name}</div>
+        <div class="inbox-thread-preview">${last.text}</div>
+      </div>
+      ${isUnread?'<div class="inbox-unread-dot"></div>':''}
+      <div class="inbox-thread-time">${last.time||'Apr 22'}</div>
+    </div>`;
+  }).join('') || '<div style="padding:2rem;text-align:center;color:#AAA;font-size:.82rem">No messages yet.<br>Message an instructor to get started.</div>';
+}
+
+function openThread(instructorId){
+  const i=INSTRUCTORS.find(x=>x.id===instructorId);
+  activeInboxThread=instructorId;
+  document.getElementById('convo-name').textContent=i.name;
+  document.getElementById('convo-instrument').textContent=i.instrument+' · '+i.location;
+  renderMessages(instructorId);
+  showConvoView();
+}
+
+function renderMessages(iid){
+  const msgs=MESSAGES[iid]||[];
+  const wrap=document.getElementById('inbox-messages');
+  wrap.innerHTML=msgs.map(m=>`
+    <div>
+      <div class="msg-bubble ${m.from}">${m.text}</div>
+      <div class="msg-time ${m.from==='me'?'right':''}">${m.time||''}</div>
+    </div>`).join('');
+  wrap.scrollTop=wrap.scrollHeight;
+}
+
+function sendMessage(){
+  const input=document.getElementById('inbox-input');
+  const text=input.value.trim();
+  if(!text||activeInboxThread===null) return;
+  if(!MESSAGES[activeInboxThread]) MESSAGES[activeInboxThread]=[];
+  MESSAGES[activeInboxThread].push({from:'me',text,time:'Now'});
+  input.value='';
+  renderMessages(activeInboxThread);
+  // Simulate reply after 1.5s
+  const i=INSTRUCTORS.find(x=>x.id===activeInboxThread);
+  setTimeout(()=>{
+    const replies=["Got it, sounds good!","I'll make a note of that for our session.","That makes sense — we'll work on it together.","Thanks for letting me know!","Looking forward to it!"];
+    MESSAGES[activeInboxThread].push({from:'them',text:replies[Math.floor(Math.random()*replies.length)],time:'Now'});
+    renderMessages(activeInboxThread);
+  },1500);
+}
+
+function handleMsgKey(e){ if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage();} }
+
+function backToList(){ showListView(); activeInboxThread=null; renderThreadList(); }
+
+function showListView(){
+  document.getElementById('inbox-list-view').classList.remove('hidden');
+  document.getElementById('inbox-convo').classList.remove('visible');
+}
+function showConvoView(){
+  document.getElementById('inbox-list-view').classList.add('hidden');
+  document.getElementById('inbox-convo').classList.add('visible');
+}
+
+function openInboxToInstructor(){
+  openInbox();
+  if(currentInstructor&&MESSAGES[currentInstructor.id]&&MESSAGES[currentInstructor.id].length){
+    setTimeout(()=>openThread(currentInstructor.id),50);
+  } else if(currentInstructor){
+    if(!MESSAGES[currentInstructor.id]) MESSAGES[currentInstructor.id]=[];
+    setTimeout(()=>openThread(currentInstructor.id),50);
+  }
+}
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+function showToast(title,body){
+  const t=document.getElementById('toast');
+  document.getElementById('toast-title').textContent=title;
+  document.getElementById('toast-body').textContent=body;
   t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'), 4500);
+  setTimeout(()=>t.classList.remove('show'),5000);
 }
 
-/* ======= ROUTING ======= */
+/* ============================================================
+   ROUTING
+   ============================================================ */
 (function init(){
-  const params = new URLSearchParams(location.search);
-  const idParam = params.get('instructor');
-  if(idParam !== null){
-    const i = INSTRUCTORS.find(x => x.id === parseInt(idParam, 10));
+  const params=new URLSearchParams(location.search);
+  const idParam=params.get('instructor');
+  if(idParam!==null){
+    const i=INSTRUCTORS.find(x=>x.id===parseInt(idParam,10));
     if(i){
-      document.getElementById('home-view').style.display = 'none';
-      document.getElementById('detail-view').style.display = 'block';
+      document.getElementById('home-view').style.display='none';
+      document.getElementById('detail-view').style.display='block';
       renderDetail(i);
       return;
     }
