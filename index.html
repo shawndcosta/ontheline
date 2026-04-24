@@ -6,7 +6,8 @@
 <title>On The Line — Bay Area Marching Band Lessons</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600&family=DM+Mono&display=swap" rel="stylesheet"><style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600&family=DM+Mono&display=swap" rel="stylesheet">
+<style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --y:#ffce1c;--yd:#C49A00;--yl:#fffcec;
@@ -19,16 +20,16 @@
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--fb);background:var(--bk2);color:var(--bk);overflow-x:hidden}
- 
+
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--wh);display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:60px;border-bottom:2px solid var(--y)}
 .nav-logo{font-family:var(--fd);font-size:2rem;letter-spacing:.08em;color:var(--bk);cursor:pointer;user-select:none}
 .nav-links{display:flex;gap:2rem;align-items:center}
-.nav-links a{color:var(--bk);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;transition:color .2s}
+.nav-links a{color:var(--bk);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;transition:color .2s;cursor:pointer}
 .nav-links a:hover{color:var(--yd)}
 .nav-cta{background:var(--y)!important;color:var(--bk)!important;padding:.4rem 1.1rem;border-radius:2px;font-weight:600!important}
 .nav-cta:hover{background:var(--yd)!important}
- 
+
 /* HERO */
 .hero{min-height:100vh;background:var(--bk2);display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:80px 3rem 3rem;position:relative;overflow:hidden}
 .hero::before{content:'On The Line';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--fd);font-size:28vw;color:rgba(245,197,24,.07);white-space:nowrap;pointer-events:none;user-select:none}
@@ -45,61 +46,32 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--wh);display
 .btn-primary:hover{background:#333;transform:translateY(-1px)}
 .btn-outline{background:transparent;color:var(--bk);border:1px solid #BBB;padding:.8rem 2rem;font-family:var(--fb);font-weight:500;font-size:.88rem;letter-spacing:.04em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:all .2s}
 .btn-outline:hover{border-color:var(--bk);color:var(--bk)}
- 
+
 .hero-visual{position:relative;z-index:2;display:flex;align-items:center;justify-content:center}
-.hero-card{background:var(--wh);border:1px solid #DDD;border-radius:4px;padding:2rem;width:320px;position:relative;box-shadow:0 4px 24px rgba(0,0,0,.08)}
-.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--y)}
-.featured-badge{font-family:var(--fm);font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:var(--yd);background:rgba(245,197,24,.15);padding:.3rem .6rem;border-radius:2px;display:inline-block;margin-bottom:1rem}
-.hc-name{font-family:var(--fd);font-size:1.8rem;color:var(--bk);letter-spacing:.04em;margin-bottom:.25rem}
-.hc-instrument{font-size:.75rem;color:var(--yd);font-weight:500;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem}
-.hc-exp{font-size:.83rem;color:#777;line-height:1.6;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid #EEE}
-.hc-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
-.hc-price{font-family:var(--fd);font-size:2rem;color:var(--bk)}
-.hc-price-sub{font-size:.68rem;color:#AAA}
-.hc-avail{font-size:.73rem;color:var(--success);font-weight:500}
-.hc-book{width:100%;background:var(--bk);color:var(--wh);border:none;padding:.7rem;font-family:var(--fb);font-weight:600;font-size:.83rem;letter-spacing:.05em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:background .2s}
-.hc-book:hover{background:#333}
- 
+.hero-image-wrap{position:relative;width:100%;max-width:520px;height:500px;overflow:hidden;border-radius:4px;background:var(--bk3)}
+.hero-image{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.hero-image-wrap:hover .hero-image{transform:scale(1.05)}
+
 .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:#AAA;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;animation:bob 2s ease-in-out infinite}
 .scroll-arrow{width:28px;height:28px;border:1px solid #CCC;border-radius:50%;display:flex;align-items:center;justify-content:center}
 .scroll-arrow::after{content:'';width:6px;height:6px;border-right:1.5px solid var(--yd);border-bottom:1.5px solid var(--yd);transform:rotate(45deg) translateY(-2px)}
 @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
- 
+
 /* MISSION TICKER */
 .mission-strip{background:var(--y);padding:0 3rem;height:44px;display:flex;align-items:center;gap:2rem;overflow:hidden}
 .mission-label{font-family:var(--fd);font-size:1rem;color:var(--bk);white-space:nowrap;letter-spacing:.05em;min-width:110px}
-.mission-mask{overflow:hidden;flex:1;-webkit-mask:linear-gradient(90deg,transparent,black 4%,black 96%,transparent)}
+.mission-mask{overflow:hidden;flex:1;-webkit-mask:linear-gradient(90deg,transparent,black 4%,black 96%,transparent);mask:linear-gradient(90deg,transparent,black 4%,black 96%,transparent)}
 .mission-track{display:flex;gap:3rem;animation:ticker 30s linear infinite;width:max-content}
 .mission-item{font-size:.8rem;font-weight:500;color:var(--bk2);white-space:nowrap;display:flex;align-items:center;gap:.7rem}
 .mdot{width:3px;height:3px;border-radius:50%;background:var(--bk2)}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
- 
+
 /* BROWSE */
-section{
-  padding:5.5rem 3rem;
-}
+section{padding:5.5rem 3rem}
+.browse{background:var(--wh)}
+.sec-eyebrow{font-family:var(--fm);font-size:.68rem;color:var(--y);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem}
+.sec-h2{font-family:var(--fd);font-size:clamp(2.2rem,4.5vw,3.5rem);letter-spacing:.03em;line-height:.95;margin-bottom:1.5rem}
 
-.browse{
-  background:var(--wh);
-}
-
-.sec-eyebrow{
-  font-family:var(--fm);
-  font-size:.68rem;
-  color:var(--y);
-  letter-spacing:.15em;
-  text-transform:uppercase;
-  margin-bottom:.8rem;
-}
-
-.sec-h2{
-  font-family:var(--fd);
-  font-size:clamp(2.2rem,4.5vw,3.5rem);
-  letter-spacing:.03em;
-  line-height:.95;
-  margin-bottom:1.5rem;
-}
- 
 .filter-bar{background:var(--bk3);border-radius:4px;padding:1.25rem 1.75rem;display:flex;gap:.8rem;align-items:center;margin-bottom:2.5rem;flex-wrap:wrap}
 .fl{font-family:var(--fm);font-size:.65rem;color:var(--yd);text-transform:uppercase;letter-spacing:.12em;margin-right:.3rem;white-space:nowrap}
 .fsel,.finp{background:var(--wh);color:var(--bk);border:1px solid #CCC;border-radius:2px;padding:.4rem .8rem;font-family:var(--fb);font-size:.8rem;outline:none;transition:border-color .2s;appearance:none}
@@ -109,9 +81,9 @@ section{
 .finp{min-width:180px}
 .filter-btn{background:var(--bk);color:var(--wh);border:none;padding:.42rem 1.2rem;font-family:var(--fb);font-weight:600;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:background .2s;margin-left:auto}
 .filter-btn:hover{background:#333}
- 
+
 .instructors-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem}
-.instructor-card{background:var(--wh);border:1px solid #DDD;border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .25s,transform .25s,box-shadow .25s}
+.instructor-card{background:var(--wh);border:1px solid #DDD;border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .25s,transform .25s,box-shadow .25s;text-decoration:none;color:inherit;display:block}
 .instructor-card:hover{border-color:var(--y);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
 .card-img{width:100%;height:160px;background:var(--bk3);display:flex;align-items:center;justify-content:center;position:relative}
 .card-initials{font-family:var(--fd);font-size:3.5rem;color:#C5C2BB;letter-spacing:.05em}
@@ -125,13 +97,12 @@ section{
 .card-price{font-family:var(--fd);font-size:1.35rem;color:var(--bk)}
 .card-psub{font-size:.65rem;color:#AAA}
 .card-mode{font-size:.7rem;font-weight:500;color:#AAA}
- 
-/* DETAIL PANEL */
-.detail-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.88);padding:4rem 2rem;overflow-y:auto;align-items:flex-start;justify-content:center}
-.detail-overlay.open{display:flex}
-.detail-panel{background:var(--wh);border:1px solid #DDD;border-radius:4px;width:100%;max-width:840px;display:grid;grid-template-columns:1fr 1.4fr;overflow:hidden;position:relative}
-.detail-close{position:absolute;top:1rem;right:1rem;background:none;border:none;color:#AAA;font-size:1.4rem;cursor:pointer;line-height:1;transition:color .2s;z-index:10}
-.detail-close:hover{color:var(--bk)}
+
+/* DETAIL PAGE (new tab view) */
+.detail-page{min-height:100vh;background:var(--bk2);padding:90px 3rem 4rem}
+.detail-back{display:inline-flex;align-items:center;gap:.5rem;color:#888;font-size:.78rem;text-decoration:none;margin-bottom:2rem;font-family:var(--fm);letter-spacing:.08em;text-transform:uppercase}
+.detail-back:hover{color:var(--yd)}
+.detail-panel{background:var(--wh);border:1px solid #DDD;border-radius:4px;width:100%;max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;overflow:hidden;position:relative;box-shadow:0 8px 30px rgba(0,0,0,.06)}
 .detail-left{background:var(--bk2);border-right:1px solid #E5E3DE;padding:2.5rem 2rem}
 .detail-avatar{width:80px;height:80px;border-radius:50%;background:var(--bk3);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:2.2rem;color:#B0ADA6;border:2px solid #DDD;margin-bottom:1.5rem}
 .detail-name{font-family:var(--fd);font-size:2rem;color:var(--bk);letter-spacing:.03em;margin-bottom:.3rem}
@@ -141,10 +112,10 @@ section{
 .dmi{font-size:.7rem;color:var(--yd);min-width:14px;margin-top:.05rem}
 .dmt{font-size:.8rem;color:#888;line-height:1.5}
 .dmt strong{color:#444}
- 
+
 .detail-right{padding:2.5rem 2rem}
 .detail-right h3{font-family:var(--fd);font-size:1.2rem;color:var(--bk);letter-spacing:.05em;margin-bottom:1.25rem}
- 
+
 /* CALENDAR */
 .cal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.9rem}
 .cal-month{font-family:var(--fd);font-size:1rem;color:var(--bk);letter-spacing:.08em}
@@ -158,7 +129,7 @@ section{
 .cal-day.booked{background:rgba(192,57,43,.08);color:#C0392B;cursor:not-allowed}
 .cal-day.sel{background:var(--y);color:var(--bk);font-weight:600}
 .cal-day.today{outline:1px solid #CCC}
- 
+
 .time-slots{margin-top:1.25rem;display:none}
 .time-slots.visible{display:block}
 .slots-label{font-family:var(--fm);font-size:.62rem;color:var(--yd);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.7rem}
@@ -167,7 +138,7 @@ section{
 .slot:hover{border-color:var(--yd);color:var(--yd)}
 .slot.taken{opacity:.3;cursor:not-allowed;pointer-events:none}
 .slot.chosen{background:var(--y);color:var(--bk);border-color:var(--y);font-weight:600}
- 
+
 .booking-summary{margin-top:1.25rem;padding:.9rem 1.1rem;background:rgba(245,197,24,.06);border:1px solid rgba(200,155,0,.2);border-radius:2px;display:none}
 .booking-summary.visible{display:block}
 .bs-row{display:flex;justify-content:space-between;margin-bottom:.35rem}
@@ -178,7 +149,7 @@ section{
 .bs-p{font-family:var(--fd);font-size:1.3rem;color:var(--yd)}
 .book-now-btn{width:100%;margin-top:.9rem;background:var(--bk);color:var(--wh);border:none;padding:.7rem;font-family:var(--fb);font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:background .2s}
 .book-now-btn:hover{background:#333}
- 
+
 /* WHY */
 .why{background:var(--bk2)}
 .why .sec-h2{color:var(--bk)}
@@ -189,7 +160,7 @@ section{
 .why-icon{width:34px;height:34px;background:rgba(245,197,24,.18);border-radius:3px;display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;font-size:.95rem}
 .why-title{font-family:var(--fd);font-size:1.15rem;color:var(--bk);letter-spacing:.04em;margin-bottom:.55rem}
 .why-desc{font-size:.82rem;color:#888;line-height:1.75}
- 
+
 /* ABOUT */
 .about{background:var(--y);padding:5.5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
 .about .sec-eyebrow{color:rgba(0,0,0,.4)}
@@ -206,22 +177,22 @@ section{
 .mini-card{flex:1;background:rgba(0,0,0,.12);border-radius:4px;padding:1.1rem}
 .mc-num{font-family:var(--fd);font-size:1.7rem;color:var(--bk);letter-spacing:.02em}
 .mc-label{font-size:.7rem;color:rgba(0,0,0,.45);letter-spacing:.04em;margin-top:.2rem}
- 
+
 /* FOOTER */
 footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem}
 .footer-logo{font-family:var(--fd);font-size:2.2rem;color:var(--bk);letter-spacing:.08em;display:block;margin-bottom:.8rem}
 .footer-tagline{font-size:.8rem;color:#AAA;line-height:1.7;max-width:220px}
 .footer-col h4{font-family:var(--fm);font-size:.62rem;color:#AAA;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.9rem}
-.footer-col a{display:block;color:#888;font-size:.8rem;text-decoration:none;margin-bottom:.45rem;transition:color .2s}
+.footer-col a{display:block;color:#888;font-size:.8rem;text-decoration:none;margin-bottom:.45rem;transition:color .2s;cursor:pointer}
 .footer-col a:hover{color:var(--yd)}
 .footer-bottom{background:var(--bk3);border-top:1px solid #E0DED9;padding:1rem 3rem;display:flex;justify-content:space-between;align-items:center}
 .footer-copy{font-size:.68rem;color:#AAA;font-family:var(--fm)}
- 
+
 /* TOAST */
 .toast{position:fixed;bottom:2rem;right:2rem;z-index:999;background:var(--wh);border:1px solid #DDD;border-left:4px solid var(--y);padding:.9rem 1.4rem;border-radius:2px;font-size:.83rem;color:var(--bk);transform:translateY(120px);opacity:0;transition:all .35s cubic-bezier(.34,1.56,.64,1);max-width:300px;box-shadow:0 8px 24px rgba(0,0,0,.1)}
 .toast.show{transform:translateY(0);opacity:1}
 .toast-title{font-weight:600;color:var(--yd);margin-bottom:.2rem;font-family:var(--fd);font-size:.95rem;letter-spacing:.04em}
- 
+
 /* RESPONSIVE */
 @media(max-width:900px){
   nav{padding:0 1.5rem}
@@ -231,74 +202,18 @@ footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:g
   .why-grid{grid-template-columns:1fr}
   .about{grid-template-columns:1fr}
   .detail-panel{grid-template-columns:1fr}
-  .detail-left{border-right:none;border-bottom:1px solid #1E1E1E}
+  .detail-left{border-right:none;border-bottom:1px solid #E5E3DE}
+  .detail-page{padding:80px 1.5rem 3rem}
   footer{grid-template-columns:1fr 1fr;gap:1.5rem}
   section{padding:4rem 1.5rem}
 }
-/*CSS*/
-.hero-image-wrap{
-  position:relative;
-  width:100%;
-  max-width:520px;
-  height:500px;
-  overflow:hidden;
-  border-radius:4px;
-}
-.hero-image-overlay{
-  position:absolute;
-  inset:0;
-  z-index:2;
-}
-
-.hero-image{
-  position:relative;
-  z-index:1;
-}
-/*.hero-image{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:grayscale(100%) contrast(1.1);
-  transition:transform .6s ease;
-}
-
-.hero-image-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    to top,
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0.1)
-  );
-  pointer-events:none;
-}
-*/
-.hero-image-wrap:hover .hero-image{
-  transform:scale(1.05);
-}
-.hero-image-text{
-  position:absolute;
-  bottom:1rem;
-  left:1rem;
-  font-family:'Space Grotesk', sans-serif;
-  font-size:.75rem;
-  letter-spacing:.15em;
-  color:white;
-  opacity:.7;
-}
-.hero-image{
-  transition:transform .6s ease;
-}
-
-.hero-image-wrap:hover .hero-image{
-  transform:scale(1.05);
-}
-
 </style>
 </head>
 <body>
- 
-<!-- NAV -->
+
+<!-- ============ HOME VIEW ============ -->
+<div id="home-view">
+
 <nav>
   <div class="nav-logo">On The Line</div>
   <div class="nav-links">
@@ -308,26 +223,16 @@ footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:g
     <a href="#browse" class="nav-cta">Book a Lesson</a>
   </div>
 </nav>
- 
-<!-- HERO -->
+
 <section class="hero" id="home">
   <div class="hero-text">
     <p class="hero-eyebrow">// Bay Area Marching Arts Platform</p>
     <h1 class="hero-h1">Level Up<br>Your March.<br>With <span>On The Line</span></h1>
     <p class="hero-sub">Connect with Bay Area marching band professionals. One on one lessons in brass, battery, front ensemble, and visual online or in person, built around your schedule.</p>
     <div class="hero-stats">
-      <div>
-        <div class="stat-num">40+</div>
-        <div class="stat-label">Instructors</div>
-      </div>
-      <div>
-        <div class="stat-num">12</div>
-        <div class="stat-label">Instruments</div>
-      </div>
-      <div>
-        <div class="stat-num">~500K</div>
-        <div class="stat-label">Bay Area Students</div>
-      </div>
+      <div><div class="stat-num">40+</div><div class="stat-label">Instructors</div></div>
+      <div><div class="stat-num">12</div><div class="stat-label">Instruments</div></div>
+      <div><div class="stat-num">~500K</div><div class="stat-label">Bay Area Students</div></div>
     </div>
     <div class="hero-actions">
       <button class="btn-primary" onclick="document.getElementById('browse').scrollIntoView({behavior:'smooth'})">Find an Instructor</button>
@@ -336,14 +241,15 @@ footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:g
   </div>
   <div class="hero-visual">
     <div class="hero-image-wrap">
-        <img src="images/pic.jpg" class="hero-image">  </div>
+      <img src="images/pic.jpg" class="hero-image" alt="">
+    </div>
+  </div>
   <div class="scroll-hint">
     <div class="scroll-arrow"></div>
     <span>Scroll</span>
   </div>
 </section>
- 
-<!-- MISSION TICKER -->
+
 <div class="mission-strip">
   <span class="mission-label">On The Line ·</span>
   <div class="mission-mask">
@@ -356,7 +262,6 @@ footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:g
       <span class="mission-item"><span class="mdot"></span>Flexible Scheduling</span>
       <span class="mission-item"><span class="mdot"></span>Reviving Bay Area Independent Scene</span>
       <span class="mission-item"><span class="mdot"></span>Battery · Brass · Front Ensemble · Visual</span>
-      <!-- duplicate for seamless loop -->
       <span class="mission-item"><span class="mdot"></span>Bay Area Independent Circuit</span>
       <span class="mission-item"><span class="mdot"></span>WBA · BOA · WGASC</span>
       <span class="mission-item"><span class="mdot"></span>Blue Devils Alumni Instructors</span>
@@ -368,8 +273,7 @@ footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:g
     </div>
   </div>
 </div>
- 
-<!-- BROWSE / SEARCH -->
+
 <section class="browse" id="browse">
   <p class="sec-eyebrow">// Find Your Instructor</p>
   <h2 class="sec-h2">Browse Bay Area<br>Instructors</h2>
@@ -405,67 +309,29 @@ footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:g
   </div>
   <div class="instructors-grid" id="instructors-grid"></div>
 </section>
- 
-<!-- WHY CADENCE -->
+
 <section class="why" id="why">
   <p class="sec-eyebrow" style="color:var(--yd)">// Why On The Line</p>
   <h2 class="sec-h2">Built For The<br>Independent Scene</h2>
   <div class="why-grid">
-    <div class="why-card">
-      <div class="why-num">01</div>
-      <div class="why-icon"></div>
-      <div class="why-title">Proffesionals Only</div>
-      <div class="why-desc">Every instructor with On The Line has verifiable DCI, WBA, or independent circuit experience to ensure the best education.</div>
-    </div>
-    <div class="why-card">
-      <div class="why-num">02</div>
-      <div class="why-icon"></div>
-      <div class="why-title">Schedule Your Way</div>
-      <div class="why-desc">Book directly on the instructor's live calendar. Filter by online or in-person, pick the time that works, and confirm instantly.</div>
-    </div>
-    <div class="why-card">
-      <div class="why-num">03</div>
-      <div class="why-icon"></div>
-      <div class="why-title">All Sections Welcome</div>
-      <div class="why-desc">With Staff covering battery, brass, front ensemble, and color guard, we offer the full ensemble so you can develop every part of your marching craft.</div>
-    </div>
-    <div class="why-card">
-      <div class="why-num">04</div>
-      <div class="why-icon"></div>
-      <div class="why-title">Bay Area Focused</div>
-      <div class="why-desc">Instructors know Bay Area schools, groups, and audition seasons. Get advice that's actually relevant to where you compete and perform.</div>
-    </div>
-    <div class="why-card">
-      <div class="why-num">05</div>
-      <div class="why-icon"></div>
-      <div class="why-title">Transparent Pricing</div>
-      <div class="why-desc">No hidden fees or subscription traps. See exactly what each session costs before you book, from $45 to $120 per hour depending on experience.</div>
-    </div>
-    <div class="why-card">
-      <div class="why-num">06</div>
-      <div class="why-icon"></div>
-      <div class="why-title">Grow the Scene</div>
-      <div class="why-desc">With fewer than 10 active independent groups remaining in the Bay Area, On The Line exists to bridge the gap between talent and opportunity.</div>
-    </div>
+    <div class="why-card"><div class="why-num">01</div><div class="why-icon"></div><div class="why-title">Proffesionals Only</div><div class="why-desc">Every instructor with On The Line has verifiable DCI, WBA, or independent circuit experience to ensure the best education.</div></div>
+    <div class="why-card"><div class="why-num">02</div><div class="why-icon"></div><div class="why-title">Schedule Your Way</div><div class="why-desc">Book directly on the instructor's live calendar. Filter by online or in-person, pick the time that works, and confirm instantly.</div></div>
+    <div class="why-card"><div class="why-num">03</div><div class="why-icon"></div><div class="why-title">All Sections Welcome</div><div class="why-desc">With Staff covering battery, brass, front ensemble, and color guard, we offer the full ensemble so you can develop every part of your marching craft.</div></div>
+    <div class="why-card"><div class="why-num">04</div><div class="why-icon"></div><div class="why-title">Bay Area Focused</div><div class="why-desc">Instructors know Bay Area schools, groups, and audition seasons. Get advice that's actually relevant to where you compete and perform.</div></div>
+    <div class="why-card"><div class="why-num">05</div><div class="why-icon"></div><div class="why-title">Transparent Pricing</div><div class="why-desc">No hidden fees or subscription traps. See exactly what each session costs before you book, from $45 to $120 per hour depending on experience.</div></div>
+    <div class="why-card"><div class="why-num">06</div><div class="why-icon"></div><div class="why-title">Grow the Scene</div><div class="why-desc">With fewer than 10 active independent groups remaining in the Bay Area, On The Line exists to bridge the gap between talent and opportunity.</div></div>
   </div>
 </section>
- 
-<!-- ABOUT / MISSION -->
+
 <section class="about" id="about">
   <div class="about-text">
     <p class="sec-eyebrow">// Our Mission</p>
     <h2 class="sec-h2">The Bay Area<br>Needs This.</h2>
-    <p class="about-body">The Bay Area is home to over 500,000 middle and high school students, yet fewer than 10 active independent marching groups remain.Lack of funding, declining school program participation, and inaccessible instruction are limmiting one of the most unique art forms in competitive music.</p>
+    <p class="about-body">The Bay Area is home to over 500,000 middle and high school students, yet fewer than 10 active independent marching groups remain. Lack of funding, declining school program participation, and inaccessible instruction are limmiting one of the most unique art forms in competitive music.</p>
     <p class="about-body">On The Line was built to change that. By connecting students directly with working professionals, we're making elite instruction accessible to every student, at every level, regardless of what school or group they belong to.</p>
     <div class="about-stat-row">
-      <div>
-        <div class="astat-num">&lt;10</div>
-        <div class="astat-label">Active Indie Groups in Bay Area</div>
-      </div>
-      <div>
-        <div class="astat-num">500K+</div>
-        <div class="astat-label">Area Students Who Could Participate</div>
-      </div>
+      <div><div class="astat-num">&lt;10</div><div class="astat-label">Active Indie Groups in Bay Area</div></div>
+      <div><div class="astat-num">500K+</div><div class="astat-label">Area Students Who Could Participate</div></div>
     </div>
   </div>
   <div class="about-visual">
@@ -474,70 +340,51 @@ footer{background:var(--bk2);border-top:1px solid #E0DED9;padding:3rem;display:g
       <div class="aq-author">— Instructor, Blue Devils 2017–2019</div>
     </div>
     <div class="mini-cards">
-      <div class="mini-card">
-        <div class="mc-num">40+</div>
-        <div class="mc-label">Verified Instructors</div>
-      </div>
-      <div class="mini-card">
-        <div class="mc-num">DCI</div>
-        <div class="mc-label">Alumni Network</div>
-      </div>
-      <div class="mini-card">
-        <div class="mc-num">100%</div>
-        <div class="mc-label">Bay Area-Based</div>
-      </div>
+      <div class="mini-card"><div class="mc-num">40+</div><div class="mc-label">Verified Instructors</div></div>
+      <div class="mini-card"><div class="mc-num">DCI</div><div class="mc-label">Alumni Network</div></div>
+      <div class="mini-card"><div class="mc-num">100%</div><div class="mc-label">Bay Area-Based</div></div>
     </div>
   </div>
 </section>
- 
-<!-- FOOTER -->
+
 <footer>
   <div>
     <span class="footer-logo">On The Line</span>
     <p class="footer-tagline">Connecting Bay Area marching students with the professionals who can take them to the next level.</p>
   </div>
-  <div class="footer-col">
-    <h4>Platform</h4>
-    <a href="#browse">Find Instructors</a>
-    <a href="#">Become an Instructor</a>
-    <a href="#">How It Works</a>
-    <a href="#">Pricing</a>
-  </div>
-  <div class="footer-col">
-    <h4>Community</h4>
-    <a href="#">Bay Area Groups</a>
-    <a href="#">Audition Resources</a>
-    <a href="#">Circuit Calendar</a>
-    <a href="#">Blog</a>
-  </div>
-  <div class="footer-col">
-    <h4>About</h4>
-    <a href="#about">Our Mission</a>
-    <a href="#">Contact</a>
-    <a href="#">Privacy</a>
-    <a href="#">Terms</a>
-  </div>
+  <div class="footer-col"><h4>Platform</h4><a href="#browse">Find Instructors</a><a href="#">Become an Instructor</a><a href="#">How It Works</a><a href="#">Pricing</a></div>
+  <div class="footer-col"><h4>Community</h4><a href="#">Bay Area Groups</a><a href="#">Audition Resources</a><a href="#">Circuit Calendar</a><a href="#">Blog</a></div>
+  <div class="footer-col"><h4>About</h4><a href="#about">Our Mission</a><a href="#">Contact</a><a href="#">Privacy</a><a href="#">Terms</a></div>
 </footer>
 <div class="footer-bottom">
   <span class="footer-copy">© 2026 On The Line · Bay Area Marching Arts</span>
   <span class="footer-copy">Built to keep the scene alive.</span>
 </div>
- 
-<!-- DETAIL OVERLAY -->
-<div class="detail-overlay" id="detail-overlay" onclick="closeDetailOnBg(event)">
-  <div class="detail-panel" id="detail-panel">
-    <button class="detail-close" onclick="closeDetail()">✕</button>
-    <div class="detail-left" id="detail-left"></div>
-    <div class="detail-right" id="detail-right"></div>
+
+</div><!-- /home-view -->
+
+
+<!-- ============ DETAIL VIEW (shown when ?instructor=N) ============ -->
+<div id="detail-view" style="display:none">
+  <nav>
+    <a class="nav-logo" href="./" style="text-decoration:none">On The Line</a>
+    <div class="nav-links">
+      <a href="./">← All Instructors</a>
+    </div>
+  </nav>
+  <div class="detail-page">
+    <div class="detail-panel" id="detail-panel">
+      <div class="detail-left" id="detail-left"></div>
+      <div class="detail-right" id="detail-right"></div>
+    </div>
   </div>
 </div>
- 
-<!-- TOAST -->
+
 <div class="toast" id="toast">
   <div class="toast-title" id="toast-title"></div>
   <div id="toast-body"></div>
 </div>
- 
+
 <script>
 const INSTRUCTORS = [
   {id:0,name:"Marcus Chen",initials:"MC",instrument:"Snare",exp:"Blue Devils 2018–2021 · DCI Finalist · 5 years teaching across Bay Area schools.",bio:"Marcus marched snare with the Blue Devils for four seasons, earning two gold medals. He specializes in rudiment development, technique refinement, and mental approach for competitive performers.",tags:["DCI","Battery","Advanced","Competitive"],price:65,mode:"Both",location:"San Jose, CA",avail:[3,5,8,10,12,15,17],booked:[6,11,20]},
@@ -549,19 +396,22 @@ const INSTRUCTORS = [
   {id:6,name:"Drew Kim",initials:"DK",instrument:"Tenor",exp:"Mandarins 2020 · Percussion ensemble arranger.",bio:"Drew marched tenors with the Mandarins and works as a percussion arranger for local indoor groups. Expert in multi-tenor technique, quad independence, and musical expression.",tags:["DCI","Battery","Tenors","Arranger"],price:75,mode:"Online",location:"Remote",avail:[5,7,11,14,19,23],booked:[3,10,21]},
   {id:7,name:"Chloe Santos",initials:"CS",instrument:"Bass Drum",exp:"Pacific Crest 2021 · Independent circuit educator.",bio:"Chloe marched bass with Pacific Crest and has been an independent educator for Bay Area winterguard and indoor drum lines. Focuses on bass technique, pulse, and ensemble lock.",tags:["WBA","Battery","Bass","Lock"],price:55,mode:"In-Person",location:"Santa Clara, CA",avail:[4,6,9,13,17,20],booked:[7,15,22]},
 ];
- 
-let selectedDay = null;
-let selectedSlot = null;
-let currentInstructor = null;
- 
+
+const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+let selectedDay = null, selectedSlot = null, currentInstructor = null;
+let calYear = 2026, calMonth = 3;
+
+/* ======= LIST VIEW ======= */
 function renderCards(list){
   const grid = document.getElementById('instructors-grid');
   if(list.length === 0){
     grid.innerHTML = '<p style="color:#444;font-size:.85rem;grid-column:1/-1;padding:2rem 0;font-family:var(--fm)">No instructors match your filters. Try adjusting your search.</p>';
     return;
   }
+  // Each card is an <a target="_blank"> so a click opens the detail page in a new tab.
   grid.innerHTML = list.map(i => `
-    <div class="instructor-card" onclick="openDetail(${i.id})">
+    <a class="instructor-card" href="?instructor=${i.id}" target="_blank" rel="noopener noreferrer">
       <div class="card-img">
         <div class="card-initials">${i.initials}</div>
         <div class="card-tag">${i.instrument}</div>
@@ -578,10 +428,10 @@ function renderCards(list){
           <div class="card-mode">${i.mode}</div>
         </div>
       </div>
-    </div>
+    </a>
   `).join('');
 }
- 
+
 function filterCards(){
   const instr = document.getElementById('filt-instrument').value;
   const mode = document.getElementById('filt-mode').value;
@@ -596,7 +446,7 @@ function filterCards(){
   });
   renderCards(filtered);
 }
- 
+
 function resetFilters(){
   document.getElementById('filt-instrument').value='';
   document.getElementById('filt-mode').value='';
@@ -604,15 +454,12 @@ function resetFilters(){
   document.getElementById('filt-search').value='';
   renderCards(INSTRUCTORS);
 }
- 
-// Calendar
-const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-let calYear = 2026, calMonth = 3; // April 2026
- 
+
+/* ======= DETAIL VIEW ======= */
 function buildCalendar(instr){
   const firstDay = new Date(calYear, calMonth, 1).getDay();
   const daysInMonth = new Date(calYear, calMonth+1, 0).getDate();
-  const today = 23; // simulated today = April 23
+  const today = 23;
   let html = `<div class="cal-header">
     <button class="cal-nav" onclick="prevMonth()">&#8249;</button>
     <span class="cal-month">${MONTH_NAMES[calMonth]} ${calYear}</span>
@@ -631,7 +478,7 @@ function buildCalendar(instr){
   html += '</div>';
   return html;
 }
- 
+
 function selectDay(d){
   selectedDay = d;
   selectedSlot = null;
@@ -639,12 +486,11 @@ function selectDay(d){
     el.classList.remove('sel');
     if(el.textContent == d && el.classList.contains('avail')) el.classList.add('sel');
   });
-  const slots = document.getElementById('time-slots');
-  slots.classList.add('visible');
+  document.getElementById('time-slots').classList.add('visible');
   document.querySelectorAll('.slot').forEach(s => s.classList.remove('chosen'));
   document.getElementById('booking-summary').classList.remove('visible');
 }
- 
+
 function selectSlot(el, time){
   selectedSlot = time;
   document.querySelectorAll('.slot').forEach(s => s.classList.remove('chosen'));
@@ -657,7 +503,7 @@ function selectSlot(el, time){
   summary.querySelector('#bs-instr').textContent = i.name;
   summary.querySelector('#bs-price').textContent = `$${i.price}`;
 }
- 
+
 function prevMonth(){
   calMonth--; if(calMonth<0){calMonth=11;calYear--;}
   document.getElementById('cal-wrap').innerHTML = buildCalendar(currentInstructor);
@@ -666,13 +512,11 @@ function nextMonth(){
   calMonth++; if(calMonth>11){calMonth=0;calYear++;}
   document.getElementById('cal-wrap').innerHTML = buildCalendar(currentInstructor);
 }
- 
-function openDetail(id){
-  const i = INSTRUCTORS[id];
+
+function renderDetail(i){
   currentInstructor = i;
-  selectedDay = null; selectedSlot = null;
-  calYear = 2026; calMonth = 3;
- 
+  document.title = `${i.name} — On The Line`;
+
   document.getElementById('detail-left').innerHTML = `
     <div class="detail-avatar">${i.initials}</div>
     <div class="detail-name">${i.name}</div>
@@ -683,10 +527,10 @@ function openDetail(id){
     <div class="dmeta"><span class="dmi">💰</span><span class="dmt"><strong>Rate:</strong> $${i.price} / 60 min</span></div>
     <div class="dmeta"><span class="dmi">🏷</span><span class="dmt">${i.tags.map(t=>`<span class="ctag">${t}</span>`).join(' ')}</span></div>
   `;
- 
+
   const timeSlots = ['9:00 AM','10:00 AM','11:00 AM','1:00 PM','2:00 PM','3:30 PM','4:30 PM','6:00 PM'];
   const takenSlots = ['10:00 AM','2:00 PM'];
- 
+
   document.getElementById('detail-right').innerHTML = `
     <h3>Select a Date &amp; Time</h3>
     <div id="cal-wrap">${buildCalendar(i)}</div>
@@ -704,26 +548,13 @@ function openDetail(id){
       <button class="book-now-btn" onclick="confirmBooking()">Confirm &amp; Book Now</button>
     </div>
   `;
- 
-  document.getElementById('detail-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
 }
- 
-function closeDetail(){
-  document.getElementById('detail-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
- 
-function closeDetailOnBg(e){
-  if(e.target === document.getElementById('detail-overlay')) closeDetail();
-}
- 
+
 function confirmBooking(){
-  if(!selectedDay || !selectedSlot){ return; }
-  closeDetail();
+  if(!selectedDay || !selectedSlot) return;
   showToast('Booking Confirmed!', `Session with ${currentInstructor.name} on ${MONTH_NAMES[calMonth]} ${selectedDay} at ${selectedSlot}`);
 }
- 
+
 function showToast(title, body){
   const t = document.getElementById('toast');
   document.getElementById('toast-title').textContent = title;
@@ -731,12 +562,22 @@ function showToast(title, body){
   t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'), 4500);
 }
- 
-// Init
-renderCards(INSTRUCTORS);
- 
-// ESC key
-document.addEventListener('keydown', e => { if(e.key==='Escape') closeDetail(); });
+
+/* ======= ROUTING ======= */
+(function init(){
+  const params = new URLSearchParams(location.search);
+  const idParam = params.get('instructor');
+  if(idParam !== null){
+    const i = INSTRUCTORS.find(x => x.id === parseInt(idParam, 10));
+    if(i){
+      document.getElementById('home-view').style.display = 'none';
+      document.getElementById('detail-view').style.display = 'block';
+      renderDetail(i);
+      return;
+    }
+  }
+  renderCards(INSTRUCTORS);
+})();
 </script>
 </body>
 </html>
